@@ -941,7 +941,7 @@ function toggleEventCard(key) {
 // ── ASSIGNMENTS ───────────────────────────────────────────────────
 function renderAssignmentsList() {
   // Show upcoming events (2025+) with option to assign BDRs
-  const upcomingKeys = Object.keys(EVENTS).filter(k => EVENTS[k].sort >= '20250101');
+  const upcomingKeys = Object.keys(EVENTS);
   const sorted = upcomingKeys.sort((a,b)=>(EVENTS[a].sort||'9')>(EVENTS[b].sort||'9')?1:-1);
 
   document.getElementById('assignmentsList').innerHTML = sorted.slice(0,50).map(key => {
