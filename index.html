@@ -385,48 +385,40 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
   .event-selector, .brief-strip, .nav, .content, .progress-strip { padding-left: 20px; padding-right: 20px; }
   .form-grid { grid-template-columns: 1fr; }
 }
-
 /* ── LOGIN ── */
 #loginScreen{position:fixed;inset:0;background:var(--navy);display:flex;align-items:center;justify-content:center;z-index:9999;}
 .lc{background:white;border-radius:20px;padding:40px 44px;width:92%;max-width:420px;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.25);}
 .lc h2{font-size:20px;font-weight:700;color:var(--text);margin-bottom:6px;}
 .lc p{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.6;}
-.lc-inp{font-family:'Roboto Mono',monospace;font-size:28px;font-weight:700;letter-spacing:6px;text-align:center;width:100%;padding:16px 12px;border:2px solid var(--border2);border-radius:12px;outline:none;color:var(--navy);background:var(--surface);transition:border-color .2s,box-shadow .2s;}
+.lc-inp{font-family:'Roboto Mono',monospace;font-size:28px;font-weight:700;letter-spacing:6px;text-align:center;width:100%;padding:16px 12px;border:2px solid var(--border2);border-radius:12px;outline:none;color:var(--navy);background:var(--surface);transition:border-color .2s;}
 .lc-inp:focus{border-color:var(--navy);box-shadow:0 0 0 4px var(--navy-light);background:white;}
 .lc-inp.err{border-color:var(--danger);animation:shake .3s ease;}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
-.lc-btn{margin-top:14px;width:100%;background:var(--navy);color:white;font-family:'Roboto',sans-serif;font-size:14px;font-weight:600;padding:14px;border:none;border-radius:12px;cursor:pointer;transition:background .2s;}
+.lc-btn{margin-top:14px;width:100%;background:var(--navy);color:white;font-family:'Roboto',sans-serif;font-size:14px;font-weight:600;padding:14px;border:none;border-radius:12px;cursor:pointer;}
 .lc-btn:hover{background:var(--navy-dark);}
-.lc-btn2{margin-top:10px;width:100%;background:white;color:var(--navy);font-family:'Roboto',sans-serif;font-size:13px;font-weight:600;padding:12px;border:1.5px solid var(--blue-border);border-radius:12px;cursor:pointer;transition:all .2s;}
+.lc-btn2{margin-top:10px;width:100%;background:white;color:var(--navy);font-family:'Roboto',sans-serif;font-size:13px;font-weight:600;padding:12px;border:1.5px solid var(--blue-border);border-radius:12px;cursor:pointer;}
 .lc-btn2:hover{background:var(--navy-xlight);}
 .lc-err{margin-top:10px;font-size:12px;color:var(--danger);min-height:18px;}
 .lc-div{display:flex;align-items:center;gap:10px;margin:14px 0 4px;color:var(--muted2);font-size:11px;}
 .lc-div::before,.lc-div::after{content:'';flex:1;height:1px;background:var(--border);}
 .lc-foot{margin-top:20px;font-size:11px;color:var(--muted2);}
-
 /* ── TRAINING ── */
 .tr-hero{background:linear-gradient(135deg,var(--navy) 0%,#4a4db8 100%);border-radius:16px;padding:28px 32px;margin-bottom:28px;color:white;}
 .tr-hero h2{font-size:20px;font-weight:700;margin-bottom:6px;}
 .tr-hero p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
 .tr-stats{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
 .tr-stat{background:rgba(255,255,255,.12);border-radius:10px;padding:10px 16px;flex:1;min-width:80px;}
-.tr-stat-v{font-size:22px;font-weight:700;}
-.tr-stat-l{font-size:10px;color:rgba(255,255,255,.65);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;font-family:'Roboto Mono',monospace;}
+.tr-sv{font-size:22px;font-weight:700;}.tr-sl{font-size:10px;color:rgba(255,255,255,.65);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;font-family:'Roboto Mono',monospace;}
 .mg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px;}
 @media(max-width:640px){.mg{grid-template-columns:1fr;}}
 .mc{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
-.mc:hover{border-color:var(--navy);background:var(--navy-xlight);transform:translateY(-1px);box-shadow:0 4px 16px rgba(43,45,139,.1);}
+.mc:hover{border-color:var(--navy);background:var(--navy-xlight);transform:translateY(-1px);}
 .mc.done{border-color:var(--ok-border);background:var(--ok-bg);}
-.mc-icon{font-size:28px;margin-bottom:12px;}
-.mc-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;}
-.mc-desc{font-size:12px;color:var(--muted);line-height:1.5;}
+.mc-icon{font-size:28px;margin-bottom:12px;}.mc-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;}.mc-desc{font-size:12px;color:var(--muted);line-height:1.5;}
 .mc-badge{position:absolute;top:12px;right:12px;font-family:'Roboto Mono',monospace;font-size:9px;padding:2px 8px;border-radius:100px;font-weight:500;}
-.bd{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok-border);}
-.bn{background:var(--navy-light);color:var(--navy);border:1px solid var(--blue-border);}
-.mc-bar{margin-top:12px;height:3px;background:var(--border);border-radius:2px;overflow:hidden;}
-.mc-fill{height:100%;background:var(--navy);border-radius:2px;transition:width .4s;}
-
-/* ── LESSON OVERLAY ── */
+.bd{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok-border);}.bn{background:var(--navy-light);color:var(--navy);border:1px solid var(--blue-border);}
+.mc-bar{margin-top:12px;height:3px;background:var(--border);border-radius:2px;overflow:hidden;}.mc-fill{height:100%;background:var(--navy);border-radius:2px;transition:width .4s;}
+/* ── LESSON ── */
 .lov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;align-items:flex-end;justify-content:center;}
 .lov.open{display:flex;}
 @media(min-width:640px){.lov{align-items:center;}}
@@ -434,54 +426,121 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
 @media(min-width:640px){.lpanel{border-radius:20px;max-height:85vh;}}
 @keyframes sup{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
 .lhdr{padding:24px 28px 20px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px;}
-.lhdr-icon{font-size:32px;flex-shrink:0;}
-.lhdr-t{flex:1;}
-.lhdr-title{font-size:16px;font-weight:700;color:var(--text);}
-.lhdr-sub{font-size:12px;color:var(--muted);margin-top:3px;}
-.lclose{width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;font-size:16px;color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s;}
-.lclose:hover{background:var(--surface2);color:var(--text);}
-.lbody{padding:24px 28px;}
-.lst-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px;}
-.lst-content{font-size:13px;color:var(--text);line-height:1.8;}
-.lst-content p{margin-bottom:12px;}
-.lst-content strong{color:var(--navy);}
+.lhdr-icon{font-size:32px;flex-shrink:0;}.lhdr-t{flex:1;}.lhdr-title{font-size:16px;font-weight:700;color:var(--text);}.lhdr-sub{font-size:12px;color:var(--muted);margin-top:3px;}
+.lclose{width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;font-size:16px;color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lclose:hover{background:var(--surface2);}
+.lbody{padding:24px 28px;}.lst-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px;}.lst-content{font-size:13px;color:var(--text);line-height:1.8;}.lst-content p{margin-bottom:12px;}.lst-content strong{color:var(--navy);}
 .ltip{background:var(--warn-bg);border-left:4px solid var(--warn);border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;font-size:12px;color:#7a4e00;line-height:1.6;}
 .lok{background:var(--ok-bg);border-left:4px solid var(--ok);border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;font-size:12px;color:#0f5230;line-height:1.6;}
 .ldanger{background:var(--danger-bg);border-left:4px solid var(--danger);border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;font-size:12px;color:#8a1a1a;line-height:1.6;}
 .qopts{display:flex;flex-direction:column;gap:10px;margin-top:14px;}
 .qopt{padding:14px 16px;background:var(--surface);border:1px solid var(--border2);border-radius:10px;cursor:pointer;font-size:13px;color:var(--text);text-align:left;transition:all .2s;}
 .qopt:hover:not(:disabled){border-color:var(--navy);background:var(--navy-xlight);}
-.qopt.qok{background:var(--ok-bg);border-color:var(--ok);color:#0f5230;}
-.qopt.qno{background:var(--danger-bg);border-color:var(--danger);color:#8a1a1a;}
-.qfb{margin-top:12px;font-size:12px;line-height:1.6;padding:10px 14px;border-radius:8px;display:none;}
-.qfb.show{display:block;}
+.qopt.qok{background:var(--ok-bg);border-color:var(--ok);color:#0f5230;}.qopt.qno{background:var(--danger-bg);border-color:var(--danger);color:#8a1a1a;}
+.qfb{margin-top:12px;font-size:12px;line-height:1.6;padding:10px 14px;border-radius:8px;display:none;}.qfb.show{display:block;}
 .lnav{padding:16px 28px 24px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);gap:12px;}
-.sdot{width:8px;height:8px;border-radius:50%;background:var(--border2);transition:all .2s;}
-.sdot.sa{background:var(--navy);width:20px;border-radius:4px;}
-.sdot.sd{background:var(--ok);}
-.lbk{background:none;border:1px solid var(--border2);color:var(--muted);font-family:'Roboto',sans-serif;font-size:13px;padding:9px 18px;border-radius:8px;cursor:pointer;transition:all .2s;}
+.sdot{width:8px;height:8px;border-radius:50%;background:var(--border2);transition:all .2s;}.sdot.sa{background:var(--navy);width:20px;border-radius:4px;}.sdot.sd{background:var(--ok);}
+.lbk{background:none;border:1px solid var(--border2);color:var(--muted);font-family:'Roboto',sans-serif;font-size:13px;padding:9px 18px;border-radius:8px;cursor:pointer;}
 .lbk:hover{border-color:var(--navy);color:var(--navy);}
-.lnx{background:var(--navy);color:white;font-family:'Roboto',sans-serif;font-size:13px;font-weight:600;padding:9px 22px;border:none;border-radius:8px;cursor:pointer;transition:background .2s;}
-.lnx:hover:not(:disabled){background:var(--navy-dark);}
-.lnx:disabled{background:var(--border2);cursor:not-allowed;}
+.lnx{background:var(--navy);color:white;font-family:'Roboto',sans-serif;font-size:13px;font-weight:600;padding:9px 22px;border:none;border-radius:8px;cursor:pointer;}
+.lnx:hover:not(:disabled){background:var(--navy-dark);}.lnx:disabled{background:var(--border2);cursor:not-allowed;}
+
+/* ── SCENARIO EDITOR ── */
+.sc-editor-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;}
+.sc-add-btn{background:var(--navy);color:white;font-family:'Roboto',sans-serif;font-size:13px;font-weight:600;padding:9px 18px;border:none;border-radius:8px;cursor:pointer;}
+.sc-add-btn:hover{background:var(--navy-dark);}
+.sc-card-edit{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:12px;}
+.sc-card-edit-head{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;}
+.sc-severity-sel{font-family:'Roboto',sans-serif;font-size:12px;font-weight:600;padding:6px 10px;border:1px solid var(--border2);border-radius:6px;background:white;cursor:pointer;outline:none;}
+.sc-title-inp{flex:1;font-family:'Roboto',sans-serif;font-size:13px;padding:8px 12px;border:1px solid var(--border2);border-radius:8px;outline:none;min-width:200px;}
+.sc-title-inp:focus{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-light);}
+.sc-del-btn{background:none;border:1px solid var(--danger-border);color:var(--danger);font-size:12px;padding:6px 10px;border-radius:6px;cursor:pointer;white-space:nowrap;font-family:'Roboto',sans-serif;}
+.sc-del-btn:hover{background:var(--danger-bg);}
+.sc-steps-label{font-family:'Roboto Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.sc-step-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;}
+.sc-step-num{width:24px;height:24px;background:var(--navy);color:white;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:6px;}
+.sc-step-inp{flex:1;font-family:'Roboto',sans-serif;font-size:13px;padding:7px 10px;border:1px solid var(--border2);border-radius:8px;outline:none;resize:vertical;min-height:36px;}
+.sc-step-inp:focus{border-color:var(--navy);}
+.sc-step-del{background:none;border:none;color:var(--muted2);font-size:18px;cursor:pointer;padding:4px 6px;line-height:1;flex-shrink:0;margin-top:2px;}
+.sc-step-del:hover{color:var(--danger);}
+.sc-add-step-btn{background:none;border:1px dashed var(--border2);color:var(--muted);font-size:12px;padding:6px 14px;border-radius:6px;cursor:pointer;font-family:'Roboto',sans-serif;width:100%;margin-top:4px;}
+.sc-add-step-btn:hover{border-color:var(--navy);color:var(--navy);}
+.sc-save-bar{display:flex;gap:10px;margin-top:16px;align-items:center;flex-wrap:wrap;}
+.sc-save-msg{font-size:12px;color:var(--ok);}
+
+/* ── DASHBOARD ── */
+.db-hero{background:linear-gradient(135deg,#1a1a4a 0%,var(--navy) 100%);border-radius:16px;padding:24px 28px;margin-bottom:24px;color:white;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.db-hero h2{font-size:18px;font-weight:700;margin-bottom:4px;}
+.db-hero p{font-size:12px;color:rgba(255,255,255,.65);}
+.db-refresh-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:white;font-family:'Roboto',sans-serif;font-size:12px;font-weight:500;padding:8px 16px;border-radius:8px;cursor:pointer;}
+.db-refresh-btn:hover{background:rgba(255,255,255,.25);}
+.db-kpi-row{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap;}
+.db-kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;flex:1;min-width:130px;}
+.db-kpi-val{font-size:26px;font-weight:700;color:var(--navy);}
+.db-kpi-lbl{font-size:11px;color:var(--muted);margin-top:4px;font-family:'Roboto Mono',monospace;text-transform:uppercase;letter-spacing:.5px;}
+.db-table{width:100%;border-collapse:collapse;font-size:13px;}
+.db-table th{font-family:'Roboto Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);padding:10px 14px;text-align:left;border-bottom:2px solid var(--border);background:var(--surface);position:sticky;top:0;}
+.db-table td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.db-table tr:hover td{background:var(--navy-xlight);}
+.db-bar-wrap{width:120px;height:6px;background:var(--border);border-radius:3px;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:6px;}
+.db-bar-fill{height:100%;border-radius:3px;transition:width .4s;}
+.db-bar-ok{background:var(--ok);}
+.db-bar-warn{background:var(--warn);}
+.db-bar-low{background:var(--danger);}
+.db-badge{font-family:'Roboto Mono',monospace;font-size:10px;padding:2px 8px;border-radius:100px;font-weight:500;white-space:nowrap;}
+.db-badge-ok{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok-border);}
+.db-badge-warn{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn-border);}
+.db-badge-low{background:var(--danger-bg);color:var(--danger);border:1px solid var(--danger-border);}
+.db-badge-na{background:var(--surface2);color:var(--muted);border:1px solid var(--border2);}
+.db-alert-list{margin-top:20px;}
+.db-alert-item{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;background:var(--danger-bg);border:1px solid var(--danger-border);border-radius:10px;margin-bottom:8px;font-size:12px;color:#8a1a1a;}
+.db-alert-icon{font-size:16px;flex-shrink:0;}
+.db-empty{text-align:center;padding:48px 20px;color:var(--muted);font-size:13px;}
+.db-section-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.db-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px;}
 </style>
 </head>
 <body>
-
-<!-- LOGIN -->
 <div id="loginScreen">
   <div class="lc">
     <div style="font-size:36px;margin-bottom:16px;">🎪</div>
     <h2>Guía de Eventos BDR</h2>
-    <p>Ingresá el número de tu evento para comenzar.<br>
-    <span style="font-family:monospace;background:var(--surface);padding:2px 8px;border-radius:4px;">84</span> &nbsp;·&nbsp;
-    <span style="font-family:monospace;background:var(--surface);padding:2px 8px;border-radius:4px;">69</span> &nbsp;·&nbsp;
-    <span style="font-family:monospace;background:var(--surface);padding:2px 8px;border-radius:4px;">63</span></p>
-    <input class="lc-inp" id="lcInput" type="number" min="0" placeholder="84" autocomplete="off">
+    <p>Ingresá tu nombre y el código de tu evento.<br>El admin te comparte el código antes del evento.</p>
+
+    <div style="text-align:left;margin-bottom:16px;">
+      <label style="font-family:'Roboto Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px;">Tu nombre completo</label>
+      <input id="lcNombre" type="text" placeholder="Ej: María González" autocomplete="name"
+        style="width:100%;font-family:'Roboto',sans-serif;font-size:15px;padding:12px 14px;border:2px solid var(--border2);border-radius:10px;outline:none;color:var(--text);transition:border-color .2s;"
+        onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='var(--border2)'"
+        onkeydown="if(event.key==='Enter') document.getElementById('lcInput').focus()">
+    </div>
+
+    <div style="text-align:left;margin-bottom:4px;">
+      <label style="font-family:'Roboto Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px;">Código del evento</label>
+      <input class="lc-inp" id="lcInput" type="text" placeholder="ACRIP25" autocomplete="off" style="text-transform:uppercase;letter-spacing:3px;">
+    </div>
     <div class="lc-err" id="lcErr"></div>
     <button class="lc-btn" onclick="doLogin()">Entrar al evento →</button>
     <div class="lc-div">o</div>
-    <button class="lc-btn2" onclick="doAdminLogin()">⚙️ Acceso admin — ver y configurar todos los eventos</button>
+    <button class="lc-btn2" onclick="showAdminPassPrompt()">⚙️ Acceso admin</button>
+
+    <!-- Admin password prompt (hidden by default) -->
+    <div id="adminPassWrap" style="display:none;margin-top:12px;">
+      <div style="text-align:left;">
+        <label style="font-family:'Roboto Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px;">Contraseña de administrador</label>
+        <div style="display:flex;gap:8px;">
+          <input id="adminPassInput" type="password" placeholder="••••••••"
+            style="flex:1;font-family:'Roboto',sans-serif;font-size:14px;padding:10px 14px;border:2px solid var(--border2);border-radius:10px;outline:none;transition:border-color .2s;"
+            onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='var(--border2)'"
+            onkeydown="if(event.key==='Enter') checkAdminPass()">
+          <button onclick="checkAdminPass()"
+            style="background:var(--navy);color:white;font-family:'Roboto',sans-serif;font-size:13px;font-weight:600;padding:10px 18px;border:none;border-radius:10px;cursor:pointer;white-space:nowrap;">
+            Entrar
+          </button>
+        </div>
+        <div id="adminPassErr" style="font-size:12px;color:var(--danger);margin-top:6px;min-height:16px;"></div>
+      </div>
+    </div>
     <div class="lc-foot">Humand · Área de Alianzas</div>
   </div>
 </div>
@@ -613,10 +672,7 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
     <span class="brief-tag" id="briefTipo">—</span>
   </div>
   <span class="brief-sep">·</span>
-  <div class="brief-item">
-    <span class="brief-label">Asistentes (ICP)</span>
-    <span class="brief-value" id="briefICP" style="font-size:12px;color:var(--navy);">Sin configurar</span>
-  </div>
+  <div class="brief-item"><span class="brief-label">Asistentes</span><span class="brief-value" id="briefICP" style="font-size:12px;color:var(--navy);">Sin configurar</span></div>
   <span class="brief-sep" id="briefRaffleSep" style="display:none">·</span>
   <div class="brief-item" id="briefRaffleItem" style="display:none">
     <span class="brief-tag brief-tag-raffle">🎧 Sorteo AirPods</span>
@@ -654,6 +710,7 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
   <div class="nav-tab" onclick="switchTab('leads', this)">👤 Registro de leads <span class="tab-count" id="count-leads">0</span></div>
   <div class="nav-tab" onclick="switchTab('training', this)">🎓 Entrenamiento</div>
   <div class="nav-tab" id="adminNavTab" onclick="switchTab('admin', this)" style="display:none;">⚙️ Admin</div>
+  <div class="nav-tab admin-only" id="dashNavTab" onclick="switchTab('dashboard', this)" style="display:none;">📊 Dashboard</div>
 </div>
 
 <!-- ── PLACEHOLDER INICIAL ── -->
@@ -669,11 +726,7 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
   <div class="tab-pane active" id="tab-capacitacion">
 
     <div class="kpi-row">
-      <div class="kpi-card" id="kpiICPCard">
-        <div class="kpi-label">Perfil asistente (ICP)</div>
-        <div class="kpi-value" id="kpiICPValor" style="font-size:13px;line-height:1.4;">Sin configurar</div>
-        <div class="kpi-sub" id="kpiICPSub">El admin configura el perfil</div>
-      </div>
+      <div class="kpi-card"><div class="kpi-label">Perfil asistente (ICP)</div><div class="kpi-value" id="kpiICPValor" style="font-size:13px;line-height:1.4;">Sin configurar</div><div class="kpi-sub" id="kpiICPSub">El admin configura el perfil</div></div>
       <div class="kpi-card" id="kpiTipoCard">
         <div class="kpi-label">Tipo de alianza</div>
         <div class="kpi-value" id="kpiTipoValor">—</div>
@@ -989,7 +1042,7 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
 
   <!-- ══════ TAB: ESCALAMIENTO ══════ -->
   <div class="tab-pane" id="tab-escalamiento">
-    <div class="alert alert-warn">
+    <div class="alert alert-warn" id="escal-regla-oro">
       <strong>Regla de oro:</strong> cada problema tiene un paso siguiente claro. La queja sin acción no sirve. Si no sabés qué hacer, la respuesta siempre es la misma: documentar y escalar al área de eventos.
     </div>
     <div class="section">
@@ -997,7 +1050,8 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
         <div class="section-icon icon-red">🚨</div>
         <div class="section-title">Escenarios frecuentes y qué hacer</div>
       </div>
-      <div class="scenario-grid">
+      <div class="scenario-grid" id="escal-grid"><!-- rendered by JS --></div>
+      <div class="scenario-grid" id="escal-grid-static" style="display:none;">
 
         <div class="scenario-card">
           <div class="scenario-head" onclick="toggleScenario(this.parentElement)">
@@ -1094,6 +1148,7 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
         </div>
 
       </div>
+      </div><!-- /escal-grid-static -->
     </div>
   </div>
 
@@ -1238,33 +1293,62 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
   </div>
 
 
-  <!-- ══════ TAB: TRAINING ══════ -->
+  <!-- TAB: TRAINING -->
   <div class="tab-pane" id="tab-training">
     <div class="tr-hero">
       <h2>🎓 Entrenamiento BDR en Eventos</h2>
-      <p>Completá los módulos antes de tu próximo evento. El contenido se personaliza con el perfil real de los asistentes de este evento.</p>
+      <p>Completá los módulos antes de tu próximo evento. El contenido se personaliza con el perfil real de los asistentes configurado por el admin.</p>
       <div class="tr-stats">
-        <div class="tr-stat"><div class="tr-stat-v" id="tr-done">0</div><div class="tr-stat-l">Completados</div></div>
-        <div class="tr-stat"><div class="tr-stat-v">5</div><div class="tr-stat-l">Total</div></div>
-        <div class="tr-stat"><div class="tr-stat-v" id="tr-pct">0%</div><div class="tr-stat-l">Progreso</div></div>
+        <div class="tr-stat"><div class="tr-sv" id="tr-done">0</div><div class="tr-sl">Completados</div></div>
+        <div class="tr-stat"><div class="tr-sv">5</div><div class="tr-sl">Total</div></div>
+        <div class="tr-stat"><div class="tr-sv" id="tr-pct">0%</div><div class="tr-sl">Progreso</div></div>
       </div>
     </div>
     <div class="mg">
-      <div class="mc" id="mc-1" onclick="openLesson(1)"><span class="mc-badge bn" id="mb-1">Nuevo</span><div class="mc-icon">🧠</div><div class="mc-title">El modelo de alianza</div><div class="mc-desc">Qué es el barter y cómo funciona esta alianza específica.</div><div class="mc-bar"><div class="mc-fill" id="mp-1" style="width:0%"></div></div></div>
-      <div class="mc" id="mc-2" onclick="openLesson(2)"><span class="mc-badge bn" id="mb-2">Nuevo</span><div class="mc-icon">🪧</div><div class="mc-title">El stand: llegada y verificación</div><div class="mc-desc">Los primeros 30 minutos y qué verificar al llegar.</div><div class="mc-bar"><div class="mc-fill" id="mp-2" style="width:0%"></div></div></div>
+      <div class="mc" id="mc-1" onclick="openLesson(1)"><span class="mc-badge bn" id="mb-1">Nuevo</span><div class="mc-icon">🧠</div><div class="mc-title">El modelo de alianza</div><div class="mc-desc">Qué es el barter y el contexto específico de esta alianza.</div><div class="mc-bar"><div class="mc-fill" id="mp-1" style="width:0%"></div></div></div>
+      <div class="mc" id="mc-2" onclick="openLesson(2)"><span class="mc-badge bn" id="mb-2">Nuevo</span><div class="mc-icon">🪧</div><div class="mc-title">El stand: llegada y verificación</div><div class="mc-desc">Los primeros 30 minutos y cómo verificar compromisos del aliado.</div><div class="mc-bar"><div class="mc-fill" id="mp-2" style="width:0%"></div></div></div>
       <div class="mc" id="mc-3" onclick="openLesson(3)"><span class="mc-badge bn" id="mb-3">Nuevo</span><div class="mc-icon">💬</div><div class="mc-title">Cómo abrir conversaciones</div><div class="mc-desc">Personalizado con el perfil real de asistentes de este evento.</div><div class="mc-bar"><div class="mc-fill" id="mp-3" style="width:0%"></div></div></div>
       <div class="mc" id="mc-4" onclick="openLesson(4)"><span class="mc-badge bn" id="mb-4">Nuevo</span><div class="mc-icon">🚨</div><div class="mc-title">Qué hacer cuando algo falla</div><div class="mc-desc">Stand mal ubicado, aliado que no cumple sus compromisos.</div><div class="mc-bar"><div class="mc-fill" id="mp-4" style="width:0%"></div></div></div>
       <div class="mc" id="mc-5" onclick="openLesson(5)"><span class="mc-badge bn" id="mb-5">Nuevo</span><div class="mc-icon">📤</div><div class="mc-title">El cierre y el debrief</div><div class="mc-desc">Cómo cerrar el evento y el seguimiento de 48h.</div><div class="mc-bar"><div class="mc-fill" id="mp-5" style="width:0%"></div></div></div>
     </div>
     <div class="alert alert-blue">
-      <strong>¿Sin contenido personalizado?</strong> El admin todavía no configuró el ICP de este evento. Pedile que complete la pestaña ⚙️ Admin para que el entrenamiento sea específico al perfil real de los asistentes.
+      <strong>¿Sin contenido personalizado?</strong> El admin todavía no configuró el ICP de este evento. Pedile que complete la pestaña ⚙️ Admin.
     </div>
   </div>
 
-  <!-- ══════ TAB: ADMIN ══════ -->
+  <!-- TAB: ADMIN -->
   <div class="tab-pane" id="tab-admin">
-    <div class="alert alert-warn" style="margin-bottom:24px;">
-      <strong>Vista exclusiva de administración.</strong> Los BDRs no ven esta pestaña. Los cambios se guardan localmente y personalizan el entrenamiento y el brief del evento.
+    <div class="section" style="margin-bottom:24px;">
+      <div class="section-header"><div class="section-icon icon-ok">🔒</div><div class="section-title">Contraseña de administrador</div></div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">La contraseña predeterminada es <strong>humand2025</strong> — cambiala antes del lanzamiento.</p>
+      <div class="form-grid">
+        <div class="form-group"><label class="form-label">Nueva contraseña</label><input class="form-input" id="aNewPass" type="password" placeholder="Mínimo 8 caracteres"></div>
+        <div class="form-group"><label class="form-label">Confirmar contraseña</label><input class="form-input" id="aNewPass2" type="password" placeholder="Repetí la contraseña"></div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:10px;align-items:center;">
+        <button class="btn-add-lead" onclick="changeAdminPass()">🔒 Cambiar contraseña</button>
+        <span id="passChangeMsg" style="font-size:12px;display:none;"></span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn" style="margin-bottom:24px;"><strong>Vista exclusiva de administración.</strong> Los BDRs no ven esta pestaña. Los cambios se guardan en este navegador y personalizan el training y el brief del evento.</div>
+
+    <div class="section">
+      <div class="section-header"><div class="section-icon icon-ok">🔑</div><div class="section-title">Código de acceso para BDRs</div></div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">Definí un código corto y memorable para que los BDRs puedan ingresar a este evento desde la pantalla de login. Compartilo por WhatsApp antes del evento.</p>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">Código de acceso</label>
+          <input class="form-input" id="aAccCode" placeholder="Ej: ACRIP25, ERIAC26, RHHQ05" style="text-transform:uppercase;font-family:'Roboto Mono',monospace;font-weight:600;font-size:15px;letter-spacing:2px;">
+          <span style="font-size:11px;color:var(--muted);margin-top:4px;display:block;">Máx. 10 caracteres, sin espacios. Solo letras y números.</span>
+        </div>
+        <div class="form-group" style="display:flex;flex-direction:column;justify-content:flex-end;">
+          <div id="aAccCodePreview" style="display:none;background:var(--navy);color:white;border-radius:12px;padding:16px 20px;text-align:center;">
+            <div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:6px;font-family:'Roboto Mono',monospace;text-transform:uppercase;letter-spacing:.5px;">Código para compartir</div>
+            <div id="aAccCodeVal" style="font-size:24px;font-weight:700;font-family:'Roboto Mono',monospace;letter-spacing:4px;"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section">
@@ -1277,32 +1361,29 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
         <div class="form-group"><label class="form-label">País / región</label><input class="form-input" id="aICPPais" placeholder="Ej: Colombia, LATAM, México"></div>
       </div>
       <div class="form-grid full" style="margin-top:12px;">
-        <div class="form-group"><label class="form-label">Dolor / problema principal que tienen</label><textarea class="form-textarea" id="aICPDolor" placeholder="Ej: Comunicación interna fragmentada entre sedes. Alta rotación porque los empleados no se sienten conectados."></textarea></div>
+        <div class="form-group"><label class="form-label">Dolor / problema principal que tienen</label><textarea class="form-textarea" id="aICPDolor" placeholder="Ej: Comunicación interna fragmentada entre sedes. Alta rotación por falta de conexión con la empresa."></textarea></div>
       </div>
       <div class="form-grid full" style="margin-top:12px;">
-        <div class="form-group"><label class="form-label">Contexto adicional para el BDR</label><textarea class="form-textarea" id="aICPCtx" placeholder="Ej: Congreso muy técnico. Los asistentes llegan con proyectos en mente. Aprovechar pausas de café, no las sesiones."></textarea></div>
+        <div class="form-group"><label class="form-label">Contexto adicional para el BDR</label><textarea class="form-textarea" id="aICPCtx" placeholder="Ej: Congreso técnico. Los asistentes llegan con proyectos en mente. Aprovechar pausas de café, no las sesiones."></textarea></div>
       </div>
     </div>
-
     <div class="section">
       <div class="section-header"><div class="section-icon icon-blue">🤝</div><div class="section-title">Tipo de alianza — Contexto para el training</div></div>
-      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">El tipo (Evergreen / Transaccional) está en los datos del evento. Agregá contexto específico que el BDR necesita saber para manejarse bien con este aliado.</p>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">El tipo (Evergreen/Transaccional) está en los datos del evento. Agregá contexto que el BDR necesita para manejarse con este aliado.</p>
       <div class="form-grid full">
-        <div class="form-group"><label class="form-label">Contexto específico de esta alianza</label><textarea class="form-textarea" id="aAliCtx" placeholder="Ej: ACRIP es alianza evergreen activa hace 2 años. Contacto: Claudia Vargas. Ya nos conocen bien. Enfocarse en novedades y casos de uso, no en presentar Humand desde cero."></textarea></div>
+        <div class="form-group"><label class="form-label">Contexto específico de esta alianza</label><textarea class="form-textarea" id="aAliCtx" placeholder="Ej: ACRIP es alianza evergreen hace 2 años. Contacto: Claudia Vargas. Ya nos conocen — enfocarse en novedades de producto."></textarea></div>
       </div>
       <div class="form-grid full" style="margin-top:12px;">
-        <div class="form-group"><label class="form-label">Qué NO debe hacer el BDR con este aliado</label><textarea class="form-textarea" id="aAliNo" placeholder="Ej: No mencionar precios directamente. No comprometer funcionalidades fuera del roadmap confirmado."></textarea></div>
+        <div class="form-group"><label class="form-label">Qué NO debe hacer el BDR con este aliado</label><textarea class="form-textarea" id="aAliNo" placeholder="Ej: No mencionar precios directamente. No comprometer funcionalidades fuera del roadmap."></textarea></div>
       </div>
     </div>
-
     <div class="section">
       <div class="section-header"><div class="section-icon icon-red">📋</div><div class="section-title">Compromisos específicos del aliado</div></div>
-      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">Detallá qué comprometió este aliado en particular, más allá de los estándar. Aparecerá en el training del BDR como contexto de lo que debe verificar.</p>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">Lo que pactó este aliado en particular. Aparece en el training como contexto de lo que el BDR debe verificar.</p>
       <div class="form-grid full">
-        <div class="form-group"><label class="form-label">Compromisos pactados (uno por línea)</label><textarea class="form-textarea" style="min-height:100px;" id="aCompromisos" placeholder="Ej: Stand de 6m² en zona principal junto al auditorio&#10;Mención desde escenario en apertura y cierre&#10;Logo en backdrop principal y en la app del evento&#10;Acceso a sala VIP para 3 personas"></textarea></div>
+        <div class="form-group"><label class="form-label">Compromisos pactados (uno por línea)</label><textarea class="form-textarea" style="min-height:100px;" id="aCompromisos" placeholder="Ej: Stand de 6m² en zona principal&#10;Mención desde escenario en apertura y cierre&#10;Logo en backdrop y en la app del evento"></textarea></div>
       </div>
     </div>
-
     <div class="section">
       <div class="section-header"><div class="section-icon icon-red">🗃️</div><div class="section-title">Base de datos (seguimiento admin)</div></div>
       <div class="alert alert-blue" style="margin-bottom:16px;font-size:12px;">Solo visible para el admin — los BDRs no gestionan esto.</div>
@@ -1313,15 +1394,91 @@ body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--te
         <div class="form-group"><label class="form-label">Estado actual</label><select class="form-select" id="aDbEst"><option value="pendiente">Pendiente</option><option value="confirmada">Confirmada</option><option value="recibida">Recibida ✓</option><option value="incumplida">Incumplida ⚠️</option></select></div>
       </div>
       <div class="form-grid full" style="margin-top:12px;">
-        <div class="form-group"><label class="form-label">Notas de seguimiento</label><textarea class="form-textarea" id="aDbNotas" placeholder="Ej: Claudia confirmó el 15/04 que la mandan el miércoles 23/04 antes del mediodía."></textarea></div>
+        <div class="form-group"><label class="form-label">Notas de seguimiento</label><textarea class="form-textarea" id="aDbNotas" placeholder="Ej: Claudia confirmó el 15/04 que la mandan el miércoles 23."></textarea></div>
+      </div>
+    </div>
+
+    <div class="section" style="margin-top:8px;">
+      <div class="section-header"><div class="section-icon icon-red">🚨</div><div class="section-title">Protocolo de fallas — Editor</div></div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">Editá, agregá o eliminá escenarios. Los BDRs ven estos escenarios en la pestaña 🚨 Protocolo de fallas. Los cambios se guardan por evento.</p>
+      <div class="sc-editor-bar">
+        <span style="font-size:13px;color:var(--muted);" id="sc-count-lbl">— escenarios</span>
+        <button class="sc-add-btn" onclick="addScenario()">+ Agregar escenario</button>
+      </div>
+      <div id="sc-editor-list"></div>
+      <div class="sc-save-bar">
+        <button class="btn-add-lead" onclick="saveScenarios()">💾 Guardar protocolo</button>
+        <button class="btn-secondary" onclick="resetScenarios()">↺ Restaurar originales</button>
+        <span class="sc-save-msg" id="sc-save-msg" style="display:none;">✓ Protocolo guardado. Los BDRs ya ven los cambios.</span>
       </div>
     </div>
 
     <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
-      <button class="btn-add-lead" onclick="saveAdminCfg()">💾 Guardar configuración</button>
+      <button class="btn-add-lead" onclick="saveAdminCfg()">💾 Guardar configuración ICP y alianza</button>
       <button class="btn-secondary" onclick="clearAdminCfg()">↺ Limpiar</button>
     </div>
-    <div id="adminMsg" style="margin-top:12px;font-size:12px;color:var(--ok);display:none;">✓ Configuración guardada. El training y el brief se actualizaron.</div>
+    <div id="adminMsg" style="margin-top:12px;font-size:12px;color:var(--ok);display:none;">✓ Guardado. El training y el brief se actualizaron.</div>
+
+    <div class="section" style="margin-top:32px;">
+      <div class="section-header"><div class="section-icon icon-navy">🔒</div><div class="section-title">Contraseña de administrador</div></div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6;">Cambiá la contraseña que protege el acceso admin. La contraseña se guarda en este navegador.</p>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">Nueva contraseña</label>
+          <input class="form-input" id="newPass1" type="password" placeholder="Nueva contraseña">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Repetir contraseña</label>
+          <input class="form-input" id="newPass2" type="password" placeholder="Repetir">
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap;">
+        <button class="btn-add-lead" onclick="changeAdminPass()" style="background:var(--navy);">🔒 Cambiar contraseña</button>
+        <span id="passChangeMsg" style="font-size:12px;display:none;"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════ TAB: DASHBOARD ══════ -->
+  <div class="tab-pane" id="tab-dashboard">
+    <div class="db-hero">
+      <div>
+        <h2>📊 Dashboard de BDRs</h2>
+        <p id="db-evento-nombre">Seleccioná un evento para ver el avance del equipo</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+        <button class="db-refresh-btn" onclick="manualRefresh()">↺ Actualizar ahora</button>
+        <span id="db-countdown" style="font-size:10px;color:rgba(255,255,255,.5);font-family:'Roboto Mono',monospace;"></span>
+      </div>
+    </div>
+    <div class="db-kpi-row">
+      <div class="db-kpi"><div class="db-kpi-val" id="db-kpi-bdrs">—</div><div class="db-kpi-lbl">BDRs activos</div></div>
+      <div class="db-kpi"><div class="db-kpi-val" id="db-kpi-avg">—</div><div class="db-kpi-lbl">Promedio checklist</div></div>
+      <div class="db-kpi"><div class="db-kpi-val" id="db-kpi-leads">—</div><div class="db-kpi-lbl">Leads registrados</div></div>
+      <div class="db-kpi"><div class="db-kpi-val" id="db-kpi-alertas">—</div><div class="db-kpi-lbl">Alertas críticas</div></div>
+    </div>
+
+    <div class="db-section-title">👥 Avance por BDR</div>
+    <div class="db-scroll">
+      <table class="db-table" id="db-table">
+        <thead>
+          <tr>
+            <th>BDR</th>
+            <th>Checklist</th>
+            <th>Leads</th>
+            <th>Training</th>
+            <th>Último acceso</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="db-tbody">
+          <tr><td colspan="6" class="db-empty">Cargando datos del evento...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="db-alert-list" id="db-alerts" style="margin-top:24px;"></div>
   </div>
 
 </div><!-- /content -->
@@ -1513,16 +1670,15 @@ function applyEvent(ev) {
     kpiSub.textContent = 'Acuerdo puntual para este evento específico';
   }
 
-  // ICP from admin config
-  const adminCfg = getAdminConfig(currentEventKey);
-  const icpEl = document.getElementById('kpiICPValor');
-  const icpSubEl = document.getElementById('kpiICPSub');
-  const briefIcpEl = document.getElementById('briefICP');
-  const icpText = adminCfg.icpRol || 'Sin configurar';
-  if (icpEl) icpEl.textContent = icpText;
-  if (icpSubEl && adminCfg.icpSector) icpSubEl.textContent = adminCfg.icpSector;
-  if (briefIcpEl) briefIcpEl.textContent = icpText;
-  }
+  // ICP display (from admin config)
+  var _icpCfg = getAdminCfg(currentEventKey);
+  var _icpTxt = _icpCfg.icpRol || 'Sin configurar';
+  var _icpEl = document.getElementById('kpiICPValor');
+  var _icpBrief = document.getElementById('briefICP');
+  var _icpSub = document.getElementById('kpiICPSub');
+  if (_icpEl) _icpEl.textContent = _icpTxt;
+  if (_icpBrief) _icpBrief.textContent = _icpTxt;
+  if (_icpSub && _icpCfg.icpSect) _icpSub.textContent = _icpCfg.icpSect;
 
   // Sorteo
   const raffleSection = document.getElementById('raffleSection');
@@ -1596,6 +1752,12 @@ function switchTab(name, tab) {
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
   document.getElementById('tab-'+name).classList.add('active');
   tab.classList.add('active');
+  // Start/stop dashboard auto-refresh
+  if (name === 'dashboard') {
+    if (typeof startDashAutoRefresh === 'function') startDashAutoRefresh();
+  } else {
+    if (typeof stopDashAutoRefresh === 'function') stopDashAutoRefresh();
+  }
 }
 function toggleScenario(card) { card.classList.toggle('open'); }
 function resetTab(name) {
@@ -1728,8 +1890,13 @@ function saveUserName(val) {
 function getUserName() {
   const stored = localStorage.getItem('humand_bdr_user') || '';
   const input = document.getElementById('userName');
-  if (input && !input.value && stored) input.value = stored;
-  return input ? input.value.trim() : stored;
+  // Prefer the stored value from login; sync it to the DOM input if needed
+  if (input) {
+    if (!input.value.trim() && stored) input.value = stored;
+    const domVal = input.value.trim();
+    return domVal || stored;
+  }
+  return stored;
 }
 
 function setSyncStatus(state) {
@@ -1960,46 +2127,8 @@ async function deleteLead(id) {
   setSyncStatus(res && res.ok ? 'ok' : 'error');
 }
 
-// initSync wired via main loadEvent override below
-    return;
-  }
-  currentEvent = EVENTS[key];
-  currentEventKey = key;
-  applyEvent(currentEvent);
-  initSync(key);
-}
+// initSync and DOMContentLoaded handled in the appended script block
 
-// Restore user name on load
-window.addEventListener('DOMContentLoaded', () => {
-  const stored = localStorage.getItem('humand_bdr_user');
-  if (stored) { const inp = document.getElementById('userName'); if (inp) inp.value = stored; }
-  updateTrainingUI();
-  document.getElementById('lcInput').addEventListener('keydown', e => { if (e.key==='Enter') doLogin(); });
-});
-
-// Main loadEvent override — chains base + admin + training
-window.loadEvent = function(key) {
-  if (!key || key === 'custom') {
-    if (key === 'custom') { document.getElementById('eventSelect').value = ''; openNewEventModal(); }
-    return;
-  }
-  // Base: set currentEvent, currentEventKey, applyEvent
-  if (typeof _baseLoadEvent === 'function') {
-    _baseLoadEvent(key);
-  } else {
-    currentEvent = EVENTS[key]; currentEventKey = key; applyEvent(currentEvent);
-  }
-  // Admin tab visibility
-  const adminTab = document.getElementById('adminNavTab');
-  if (adminTab) adminTab.style.display = isAdmin ? '' : 'none';
-  if (isAdmin) loadAdminForm(key);
-  // ICP on brief + KPI
-  refreshICPDisplay(key);
-  // Dynamic lessons
-  buildLessons(key);
-  // Sync
-  if (typeof initSync === 'function') initSync(key);
-};
 </script>
 
 <!-- LESSON OVERLAY -->
@@ -2007,10 +2136,7 @@ window.loadEvent = function(key) {
   <div class="lpanel">
     <div class="lhdr">
       <div class="lhdr-icon" id="lIcon">🧠</div>
-      <div class="lhdr-t">
-        <div class="lhdr-title" id="lTitle"></div>
-        <div class="lhdr-sub" id="lSub"></div>
-      </div>
+      <div class="lhdr-t"><div class="lhdr-title" id="lTitle"></div><div class="lhdr-sub" id="lSub"></div></div>
       <button class="lclose" onclick="closeLesson()">✕</button>
     </div>
     <div class="lbody" id="lBody"></div>
@@ -2023,37 +2149,105 @@ window.loadEvent = function(key) {
     </div>
   </div>
 </div>
-
 <script>
-// ═══════════════════════════════════
-//  LOGIN
-// ═══════════════════════════════════
+// ── GLOBALS (declared first so available everywhere)
 var isAdmin = false;
+var curL = null, curS = 0, qDone = false;
+var trState = {};
+try { trState = JSON.parse(localStorage.getItem('hum_tr') || '{}'); } catch(e) {}
 
+// ── LOGIN
 function doLogin() {
-  var val = document.getElementById('lcInput').value.trim();
-  var num = parseInt(val, 10);
-  var key = 'ev_' + num;
-  if (!isNaN(num) && EVENTS && EVENTS[key]) {
+  var nombre = document.getElementById('lcNombre').value.trim();
+  var raw = document.getElementById('lcInput').value.trim().toUpperCase().replace(/[^A-Z0-9]/g,'');
+
+  if (!nombre) {
+    document.getElementById('lcNombre').style.borderColor = 'var(--danger)';
+    showLoginErr('Ingresá tu nombre para continuar.');
+    document.getElementById('lcNombre').focus();
+    return;
+  }
+  if (!raw) { showLoginErr('Ingresá el código de tu evento.'); return; }
+
+  var map = buildCodeMap();
+  var key = map[raw];
+
+  if (key && EVENTS[key]) {
+    // Save name so it's pre-filled everywhere
+    localStorage.setItem('humand_bdr_user', nombre);
+    var userInp = document.getElementById('userName');
+    if (userInp) { userInp.value = nombre; if (typeof saveUserName === 'function') saveUserName(nombre); }
+
     document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('eventSelect').value = key;
     loadEvent(key);
   } else {
-    document.getElementById('lcErr').textContent = 'Número no encontrado. Revisá con el área de eventos.';
-    var inp = document.getElementById('lcInput');
-    inp.classList.add('err');
-    setTimeout(function(){ inp.classList.remove('err'); }, 500);
+    showLoginErr('Código no encontrado. Pedíselo al área de eventos.');
   }
 }
 
-function doAdminLogin() {
-  isAdmin = true;
-  document.getElementById('loginScreen').style.display = 'none';
+function showLoginErr(msg) {
+  document.getElementById('lcErr').textContent = msg;
+  var inp = document.getElementById('lcInput');
+  inp.classList.add('err');
+  setTimeout(function(){ inp.classList.remove('err'); document.getElementById('lcErr').textContent=''; }, 2000);
 }
 
-// ═══════════════════════════════════
-//  ADMIN CONFIG
-// ═══════════════════════════════════
+function changeAdminPass() {
+  var p1 = (document.getElementById('newPass1') || {}).value || '';
+  var p2 = (document.getElementById('newPass2') || {}).value || '';
+  var msg = document.getElementById('passChangeMsg');
+  if (!p1 || p1.length < 6) {
+    if (msg) { msg.textContent = '⚠️ La contraseña debe tener al menos 6 caracteres.'; msg.style.color='var(--danger)'; msg.style.display='inline'; setTimeout(function(){ msg.style.display='none'; }, 3000); }
+    return;
+  }
+  if (p1 !== p2) {
+    if (msg) { msg.textContent = '⚠️ Las contraseñas no coinciden.'; msg.style.color='var(--danger)'; msg.style.display='inline'; setTimeout(function(){ msg.style.display='none'; }, 3000); }
+    return;
+  }
+  localStorage.setItem('hum_admin_pass', p1);
+  var inp1 = document.getElementById('newPass1'); if(inp1) inp1.value='';
+  var inp2 = document.getElementById('newPass2'); if(inp2) inp2.value='';
+  if (msg) { msg.textContent = '✓ Contraseña actualizada.'; msg.style.color='var(--ok)'; msg.style.display='inline'; setTimeout(function(){ msg.style.display='none'; }, 3000); }
+}
+
+// ── ADMIN PASSWORD
+var ADMIN_PASS_DEFAULT = 'humand2025';
+
+function getAdminPass() {
+  return localStorage.getItem('hum_admin_pass') || ADMIN_PASS_DEFAULT;
+}
+
+function showAdminPassPrompt() {
+  var wrap = document.getElementById('adminPassWrap');
+  if (wrap) {
+    wrap.style.display = wrap.style.display === 'none' ? 'block' : 'none';
+    if (wrap.style.display === 'block') {
+      setTimeout(function(){ var inp = document.getElementById('adminPassInput'); if(inp) inp.focus(); }, 50);
+    }
+  }
+}
+
+function checkAdminPass() {
+  var inp = document.getElementById('adminPassInput');
+  var err = document.getElementById('adminPassErr');
+  var val = inp ? inp.value : '';
+  if (val === getAdminPass()) {
+    if (inp) inp.value = '';
+    document.getElementById('adminPassWrap').style.display = 'none';
+    doAdminLogin();
+  } else {
+    if (err) {
+      err.textContent = 'Contraseña incorrecta.';
+      setTimeout(function(){ if(err) err.textContent=''; }, 2000);
+    }
+    if (inp) { inp.value=''; inp.focus(); }
+  }
+}
+
+// doAdminLogin defined below as window override
+
+// ── ADMIN CONFIG
 function getAdminCfg(key) {
   if (!key) return {};
   try { return JSON.parse(localStorage.getItem('hum_adm_' + key) || '{}'); } catch(e) { return {}; }
@@ -2062,20 +2256,21 @@ function getAdminCfg(key) {
 function saveAdminCfg() {
   if (!currentEventKey) return;
   var cfg = {
-    icpRol:    document.getElementById('aICPRol').value.trim(),
-    icpTam:    document.getElementById('aICPTam').value.trim(),
-    icpSect:   document.getElementById('aICPSect').value.trim(),
-    icpPais:   document.getElementById('aICPPais').value.trim(),
-    icpDolor:  document.getElementById('aICPDolor').value.trim(),
-    icpCtx:    document.getElementById('aICPCtx').value.trim(),
-    aliCtx:    document.getElementById('aAliCtx').value.trim(),
-    aliNo:     document.getElementById('aAliNo').value.trim(),
+    accCode: (document.getElementById('aAccCode').value.trim().toUpperCase().replace(/[^A-Z0-9]/g,'')).slice(0,10),
+    icpRol: document.getElementById('aICPRol').value.trim(),
+    icpTam: document.getElementById('aICPTam').value.trim(),
+    icpSect: document.getElementById('aICPSect').value.trim(),
+    icpPais: document.getElementById('aICPPais').value.trim(),
+    icpDolor: document.getElementById('aICPDolor').value.trim(),
+    icpCtx: document.getElementById('aICPCtx').value.trim(),
+    aliCtx: document.getElementById('aAliCtx').value.trim(),
+    aliNo: document.getElementById('aAliNo').value.trim(),
     compromisos: document.getElementById('aCompromisos').value.trim(),
-    db:        document.getElementById('aDb').value,
-    dbFecha:   document.getElementById('aDbFecha').value,
-    dbResp:    document.getElementById('aDbResp').value.trim(),
-    dbEst:     document.getElementById('aDbEst').value,
-    dbNotas:   document.getElementById('aDbNotas').value.trim(),
+    db: document.getElementById('aDb').value,
+    dbFecha: document.getElementById('aDbFecha').value,
+    dbResp: document.getElementById('aDbResp').value.trim(),
+    dbEst: document.getElementById('aDbEst').value,
+    dbNotas: document.getElementById('aDbNotas').value.trim()
   };
   localStorage.setItem('hum_adm_' + currentEventKey, JSON.stringify(cfg));
   refreshICPDisplay(currentEventKey);
@@ -2085,8 +2280,7 @@ function saveAdminCfg() {
 }
 
 function clearAdminCfg() {
-  if (!currentEventKey) return;
-  if (!confirm('¿Limpiar la configuración de este evento?')) return;
+  if (!currentEventKey || !confirm('¿Limpiar la configuración de este evento?')) return;
   localStorage.removeItem('hum_adm_' + currentEventKey);
   loadAdminForm(currentEventKey);
 }
@@ -2094,268 +2288,773 @@ function clearAdminCfg() {
 function loadAdminForm(key) {
   var cfg = getAdminCfg(key);
   var map = {
-    aICPRol: cfg.icpRol||'', aICPTam: cfg.icpTam||'', aICPSect: cfg.icpSect||'',
-    aICPPais: cfg.icpPais||'', aICPDolor: cfg.icpDolor||'', aICPCtx: cfg.icpCtx||'',
-    aAliCtx: cfg.aliCtx||'', aAliNo: cfg.aliNo||'', aCompromisos: cfg.compromisos||'',
-    aDb: cfg.db||'no', aDbFecha: cfg.dbFecha||'', aDbResp: cfg.dbResp||'',
-    aDbEst: cfg.dbEst||'pendiente', aDbNotas: cfg.dbNotas||''
+    aAccCode:cfg.accCode||'', aICPRol:cfg.icpRol||'', aICPTam:cfg.icpTam||'', aICPSect:cfg.icpSect||'',
+    aICPPais:cfg.icpPais||'', aICPDolor:cfg.icpDolor||'', aICPCtx:cfg.icpCtx||'',
+    aAliCtx:cfg.aliCtx||'', aAliNo:cfg.aliNo||'', aCompromisos:cfg.compromisos||'',
+    aDb:cfg.db||'no', aDbFecha:cfg.dbFecha||'', aDbResp:cfg.dbResp||'',
+    aDbEst:cfg.dbEst||'pendiente', aDbNotas:cfg.dbNotas||''
   };
-  Object.keys(map).forEach(function(id) {
-    var el = document.getElementById(id); if (el) el.value = map[id];
-  });
+  Object.keys(map).forEach(function(id){ var el=document.getElementById(id); if(el) el.value=map[id]; });
+  updateCodePreview();
 }
 
 function refreshICPDisplay(key) {
   var cfg = getAdminCfg(key);
   var txt = cfg.icpRol || 'Sin configurar';
-  var el1 = document.getElementById('kpiICPValor');
-  var el2 = document.getElementById('briefICP');
-  var el3 = document.getElementById('kpiICPSub');
-  if (el1) el1.textContent = txt;
-  if (el2) el2.textContent = txt;
-  if (el3 && cfg.icpSect) el3.textContent = cfg.icpSect;
+  var el1=document.getElementById('kpiICPValor'); if(el1) el1.textContent=txt;
+  var el2=document.getElementById('briefICP'); if(el2) el2.textContent=txt;
+  var el3=document.getElementById('kpiICPSub'); if(el3&&cfg.icpSect) el3.textContent=cfg.icpSect;
 }
 
-// ═══════════════════════════════════
-//  TRAINING — base lessons
-// ═══════════════════════════════════
+// ── MAIN loadEvent OVERRIDE (single definition, chains _baseLoadEvent + new features)
+window.loadEvent = function(key) {
+  if (!key || key === 'custom') {
+    if (key === 'custom') { document.getElementById('eventSelect').value=''; openNewEventModal(); }
+    return;
+  }
+  _baseLoadEvent(key);
+  // Update page title
+  if (EVENTS[key]) document.title = EVENTS[key].nombre + ' — Guía Humand';
+  // Admin tab
+  var adminTab = document.getElementById('adminNavTab');
+  if (adminTab) adminTab.style.display = isAdmin ? '' : 'none';
+  if (isAdmin) loadAdminForm(key);
+  // ICP display
+  refreshICPDisplay(key);
+  // Build personalized lessons
+  buildLessons(key);
+  // Sync with Google Sheets
+  if (typeof initSync === 'function') initSync(key);
+};
+
+// ── TRAINING — base lesson content
 var LESSONS = {
   1: { icon:'🧠', title:'El modelo de alianza', steps:[
     { t:'¿Qué es el modelo barter?',
-      h:'<p>Humand no paga por estar en eventos. Ofrecemos algo más valioso: <strong>acceso gratuito y con la marca del aliado a nuestra app</strong> para que sus asistentes tengan mejor experiencia.</p><p>El aliado nos da a cambio <strong>visibilidad, stand y acceso a asistentes</strong>. Eso es el barter: intercambio de valor sin dinero.</p><div class="lok"><strong>Clave:</strong> Cuando el aliado pregunta "¿cuánto pagan?", la respuesta es: "No pagamos — les damos la app del evento gratis con su branding. Nosotros invertimos tecnología, ustedes nos dan visibilidad."</div>',
-      quiz:null },
-    { t:'Esta alianza específica',
-      h:'<div class="ltip">Cargando contexto del evento...</div>',
-      quiz:null },
+      h:'<p>Humand no paga por estar en eventos. Ofrecemos algo más valioso: <strong>acceso gratuito y con la marca del aliado a nuestra app</strong>.</p><p>El aliado nos da a cambio <strong>visibilidad, stand y acceso a asistentes</strong>. Eso es el barter: intercambio de valor sin dinero.</p><div class="lok"><strong>Clave:</strong> Cuando el aliado pregunta "¿cuánto pagan?": "No pagamos — les damos la app del evento gratis con su branding. Nosotros invertimos tecnología, ustedes nos dan visibilidad."</div>', quiz:null },
+    { t:'Esta alianza específica', h:'<div class="ltip">Cargando contexto del evento...</div>', quiz:null },
     { t:'Mini quiz',
-      h:'<p>El organizador te dice: <em>"No entiendo — ¿Humand qué hace acá? ¿Nos pagan para estar?"</em><br><br>¿Cuál es tu mejor respuesta?</p>',
-      quiz:{ opts:['Les explicamos que tenemos presupuesto para patrocinios.','No pagamos — les damos la app del evento con su marca gratis. Ustedes nos dan visibilidad y stand a cambio.','Somos la app oficial, eso está en el contrato.','Eso lo manejó el área de eventos, yo solo estoy acá hoy.'], ok:1, fb:['❌ Humand no paga en efectivo — el modelo es barter.','✅ Exacto. Valor por valor, sin dinero.','❌ No explica el modelo ni genera confianza.','❌ Nunca delegues cuando podés responder.'] } }
+      h:'<p>El organizador te dice: <em>"No entiendo — ¿Humand qué hace acá? ¿Nos pagan?"</em><br><br>¿Cuál es tu mejor respuesta?</p>',
+      quiz:{ opts:['Explicamos que tenemos presupuesto para patrocinios.','No pagamos — les damos la app del evento con su marca gratis. Ustedes nos dan visibilidad y stand a cambio.','Somos la app oficial, está en el contrato.','Lo manejó el área de eventos, yo solo estoy acá hoy.'], ok:1, fb:['❌ Humand no paga en efectivo — el modelo es barter.','✅ Exacto. Valor por valor, sin dinero.','❌ No explica el modelo ni genera confianza.','❌ Nunca delegues cuando podés responder.'] } }
   ]},
   2: { icon:'🪧', title:'El stand: llegada y verificación', steps:[
     { t:'Los primeros 30 minutos',
-      h:'<p>Al llegar al evento tenés 30 minutos para verificar todo antes de que arranque:</p><p><strong>1.</strong> Ubicar al contacto del aliado y presentarte.<br><strong>2.</strong> Verificar ubicación del stand (zona de tráfico).<br><strong>3.</strong> Verificar dimensiones, luz, electricidad y WiFi si aplica.<br><strong>4.</strong> Confirmar credenciales para todo el equipo.<br><strong>5.</strong> Sacar foto del stand antes de que empiece.</p><div class="lok"><strong>Tip:</strong> La foto no es para redes — es evidencia. Si después hay un problema, esa foto con timestamp es tu prueba.</div>',
-      quiz:null },
+      h:'<p>Al llegar tenés 30 minutos para verificar antes de que arranque:</p><p><strong>1.</strong> Ubicar al contacto del aliado y presentarte.<br><strong>2.</strong> Verificar ubicación del stand (zona de tráfico).<br><strong>3.</strong> Verificar dimensiones, luz, electricidad y WiFi si aplica.<br><strong>4.</strong> Confirmar credenciales para todo el equipo.<br><strong>5.</strong> Foto del stand antes de que empiece (es evidencia, no redes).</p>', quiz:null },
     { t:'Si algo no está bien',
-      h:'<p>El stand está en un pasillo trasero o hay compromisos incumplidos:</p><p><strong>1.</strong> Sacá foto de inmediato.<br><strong>2.</strong> Buscá al organizador: <em>"El stand quedó sin tráfico, necesito reubicarlo antes de que arranque."</em><br><strong>3.</strong> Si no lo mueven, escalá al área de eventos con la foto <strong>ahora</strong> — no al final.<br><strong>4.</strong> Si no se puede mover, salí activamente al evento. No te quedés esperando.</p><div class="ldanger"><strong>Error frecuente:</strong> Quedarse en el stand malo esperando. Si el stand no funciona, vos tenés que moverse.</div>',
-      quiz:null },
+      h:'<p><strong>1.</strong> Foto de inmediato.<br><strong>2.</strong> Buscá al organizador: <em>"El stand quedó sin tráfico, necesito reubicarlo antes de que arranque."</em><br><strong>3.</strong> Si no lo mueven, escalá al área de eventos con la foto <strong>ahora</strong>.<br><strong>4.</strong> Si no se puede mover, salí activamente. No te quedés esperando.</p><div class="ldanger"><strong>Error frecuente:</strong> Quedarse en el stand malo esperando. Si el stand no funciona, vos tenés que moverse.</div>', quiz:null },
     { t:'Quiz: llegada',
       h:'<p>Llegás y solo hay credenciales para 2 personas pero vinieron 3 BDRs. ¿Qué hacés?</p>',
       quiz:{ opts:['Dos entran y uno espera afuera todo el evento.','Entran los tres sin credencial.','Contactás al organizador para pedir la credencial faltante y escalás si no la resuelven.','Usás una credencial de otra empresa.'], ok:2, fb:['❌ Perder un BDR todo el evento es muy costoso.','❌ Puede crear conflicto con el organizador.','✅ Correcto. Resolver en sitio primero, escalar si no funciona.','❌ Nunca. Puede interpretarse como fraude.'] } }
   ]},
   3: { icon:'💬', title:'Cómo abrir conversaciones', steps:[
     { t:'Preguntas de apertura para este evento',
-      h:'<div class="ltip">El admin todavía no configuró el ICP de este evento. Pedile que complete la pestaña ⚙️ Admin para personalizar este módulo.</div><p>Preguntas generales que siempre funcionan:</p><p><strong>"¿Cuántas personas tienen en su equipo?"</strong><br>Sabés si califican al instante.<br><br><strong>"¿Cómo se enteran hoy los empleados de lo que pasa en la empresa?"</strong><br>Si dicen WhatsApp o email, encontraste el dolor.<br><br><strong>"¿Trabajan con equipos en varias sedes?"</strong><br>Más sedes = más relevancia para Humand.</p>',
-      quiz:null },
+      h:'<div class="ltip">El admin todavía no configuró el ICP de este evento. Entrá como admin y completá la sección de perfil del asistente para personalizar este módulo.</div><p>Preguntas generales que siempre funcionan:</p><p><strong>"¿Cuántas personas tienen en su equipo?"</strong><br>Sabés si califican al instante.<br><br><strong>"¿Cómo se enteran hoy los empleados de lo que pasa en la empresa?"</strong><br>Si dicen WhatsApp o email, encontraste el dolor.<br><br><strong>"¿Trabajan con equipos en varias sedes?"</strong><br>Más sedes = más relevancia para Humand.</p>', quiz:null },
     { t:'Cómo leer el nivel de interés',
-      h:'<p><strong>🔥 Alto:</strong> Preguntan precio, piden demo, dicen "esto resuelve lo que necesitamos". Pedí reunión antes de que se vayan del stand.</p><p><strong>⚡ Medio:</strong> Interés pero sin urgencia. Registralos, seguimiento en 2 semanas.</p><p><strong>🌱 Bajo:</strong> Educados sin problema claro. Registrá igual — el contexto puede cambiar.</p><div class="ltip"><strong>Regla de oro:</strong> Si alguien te da su tarjeta o dice "mandame info", es un lead. Registralo en el momento — al final del evento olvidás el contexto.</div>',
-      quiz:null },
+      h:'<p><strong>🔥 Alto:</strong> Preguntan precio, piden demo, dicen "esto resuelve lo que necesitamos". Pedí reunión antes de que se vayan.<br><br><strong>⚡ Medio:</strong> Interés pero sin urgencia. Registralos, seguimiento en 2 semanas.<br><br><strong>🌱 Bajo:</strong> Educados sin problema claro. Registrá igual — el contexto puede cambiar.</p><div class="ltip"><strong>Regla de oro:</strong> Si alguien te da su tarjeta o dice "mandame info", es un lead. Registralo en el momento — al final del evento olvidás el contexto.</div>', quiz:null },
     { t:'Quiz: apertura',
       h:'<p>Un asistente se acerca a tu stand. Tenés 3 segundos. ¿Cuál es la mejor apertura?</p>',
-      quiz:{ opts:['"Hola, ¿le explico qué hace Humand?"','"¿Cuántas personas tienen en su equipo? Te pregunto porque trabajamos con empresas de distintos tamaños."','"Somos una plataforma de comunicación interna con IA y gestión de tareas."','"¿Le interesa mejorar la comunicación interna?"'], ok:1, fb:['⚠️ Pone toda la carga en ellos. Pueden decir "no gracias".','✅ Pregunta que genera reflexión y abre el diálogo.','❌ Muy técnico. Perdiste su atención en la segunda coma.','⚠️ Sí/no. Si dicen "ya lo tenemos", terminó la conversación.'] } }
+      quiz:{ opts:['"Hola, ¿le explico qué hace Humand?"','"¿Cuántas personas tienen en su equipo? Te pregunto porque trabajamos con empresas de distintos tamaños."','"Somos una plataforma de comunicación interna con IA y gestión de tareas."','"¿Le interesa mejorar la comunicación interna?"'], ok:1, fb:['⚠️ Pone toda la carga en ellos. Pueden decir "no gracias".','✅ Pregunta que abre el diálogo de forma natural.','❌ Muy técnico. Perdiste su atención en la segunda coma.','⚠️ Sí/no. Si dicen "ya lo tenemos", terminó la conversación.'] } }
   ]},
   4: { icon:'🚨', title:'Qué hacer cuando algo falla', steps:[
     { t:'El aliado no sabe quién sos',
-      h:'<p><strong>1.</strong> Sin confrontación: <em>"¿Hablo con [nombre]? Somos los aliados tecnológicos del evento."</em><br><strong>2.</strong> Si el contacto no está, pedí que lo llamen en ese momento.<br><strong>3.</strong> Escalá al área de eventos con el nombre del organizador con quien estás hablando.<br><strong>4.</strong> No aceptar condiciones distintas a las pactadas sin consultar.</p><div class="ldanger"><strong>Nunca:</strong> aceptar "quedate acá nomás" si el lugar no corresponde a lo pactado.</div>',
-      quiz:null },
+      h:'<p><strong>1.</strong> Sin confrontación: <em>"¿Hablo con [nombre]? Somos los aliados tecnológicos del evento."</em><br><strong>2.</strong> Si el contacto no está, pedí que lo llamen ahora.<br><strong>3.</strong> Escalá al área de eventos con el nombre con quien estás hablando.<br><strong>4.</strong> No aceptar condiciones distintas sin consultar.</p><div class="ldanger"><strong>Nunca:</strong> aceptar "quedate acá nomás" si el lugar no corresponde a lo pactado.</div>', quiz:null },
     { t:'Compromisos incumplidos',
-      h:'<p>Si el aliado no cumple un compromiso pactado (stand en mal lugar, sin credenciales, sin mención en escenario):</p><p><strong>1.</strong> Documentá con evidencia (foto, captura, nombres).<br><strong>2.</strong> Intentá resolverlo en el momento con el organizador.<br><strong>3.</strong> Si no se resuelve, escalá al área de eventos ese mismo día con la evidencia.</p><div class="ltip"><strong>Sin evidencia no hay reclamo posible.</strong> Foto del stand, captura de WhatsApp, nombre de quién dijo qué y cuándo.</div>',
-      quiz:null },
+      h:'<p>Si el aliado no cumple un compromiso (stand en mal lugar, sin credenciales, sin mención):<br><br><strong>1.</strong> Documentá con evidencia (foto, captura, nombres).<br><strong>2.</strong> Intentá resolverlo en el momento con el organizador.<br><strong>3.</strong> Si no se resuelve, escalá al área de eventos ese mismo día con evidencia.</p><div class="ltip"><strong>Sin evidencia no hay reclamo posible.</strong> Foto, captura de WhatsApp, nombre de quién dijo qué y cuándo.</div>', quiz:null },
     { t:'Quiz: escalamiento',
-      h:'<p>Durante el sorteo de AirPods, el presentador dice "el ganador tiene que ser usuario de <em>la app del evento</em>". No mencionó Humand. ¿Qué hacés?</p>',
-      quiz:{ opts:['Nada — ya terminó el sorteo.','Acercarte al organizador en el siguiente break: "Faltó mencionar a Humand — ¿podemos hacer una mención breve antes del próximo corte?"','Publicar en redes que el ganador fue usuario de Humand.','Reclamar en frente de los asistentes.'], ok:1, fb:['❌ El incumplimiento quedó sin documentar ni corrección.','✅ Correcto. Diplomático y con posibilidad de corrección inmediata.','❌ Nunca sin validar con el área de eventos.','❌ Un reclamo público arruina la relación con el aliado.'] } }
+      h:'<p>En el sorteo de AirPods, el presentador dice "el ganador tiene que ser usuario de <em>la app del evento</em>". No mencionó Humand. ¿Qué hacés?</p>',
+      quiz:{ opts:['Nada — ya terminó el sorteo.','Acercarte al organizador en el siguiente break: "Faltó mencionar a Humand — ¿podemos hacer una mención breve antes del próximo corte?"','Publicar en redes que el ganador fue usuario de Humand.','Reclamar en frente de los asistentes.'], ok:1, fb:['❌ El incumplimiento quedó sin documentar ni corrección.','✅ Correcto. Diplomático y con posibilidad de corrección.','❌ Nunca sin validar con el área de eventos.','❌ Un reclamo público arruina la relación con el aliado.'] } }
   ]},
   5: { icon:'📤', title:'El cierre y el debrief', steps:[
     { t:'Cómo cerrar el evento',
-      h:'<p>Antes de irte, tres cosas:</p><p><strong>1. Exportar leads.</strong> Antes de cerrar la app, exportá el CSV mientras tenés el contexto fresco.<br><strong>2. Foto de evidencia.</strong> Stand, material, equipo — sirve como contenido y prueba.<br><strong>3. Confirmar próximos pasos con el organizador.</strong> Cualquier compromiso pendiente, dejalo por escrito en WhatsApp.</p>',
-      quiz:null },
-    { t:'El debrief: qué incluir',
-      h:'<p>Se manda al área de eventos dentro de las <strong>24 horas</strong>. Estructura mínima:</p><p><strong>Conversaciones generadas:</strong> número aproximado.<br><strong>Leads registrados:</strong> número exacto.<br><strong>Qué funcionó bien:</strong> 2-3 líneas.<br><strong>Qué no funcionó:</strong> con evidencia.<br><strong>Propuesta para el próximo:</strong> acción concreta.</p><div class="lok"><strong>El debrief con evidencia y propuesta genera cambios.</strong> El que solo dice "todo estuvo bien" no aporta nada.</div>',
-      quiz:null },
+      h:'<p><strong>1. Exportar leads.</strong> Antes de cerrar la app, exportá el CSV mientras tenés el contexto fresco.<br><strong>2. Foto de evidencia.</strong> Stand, material, equipo — contenido y prueba.<br><strong>3. Próximos pasos.</strong> Cualquier compromiso pendiente del aliado, dejalo por escrito en WhatsApp.</p>', quiz:null },
+    { t:'El debrief',
+      h:'<p>Se manda al área de eventos dentro de las <strong>24 horas</strong>:</p><p><strong>Conversaciones generadas</strong> · <strong>Leads registrados</strong> · <strong>Qué funcionó bien</strong> · <strong>Qué no funcionó</strong> (con evidencia) · <strong>Propuesta para el próximo</strong> (acción concreta).</p><div class="lok"><strong>El debrief con evidencia y propuesta genera cambios.</strong> El que solo dice "todo estuvo bien" no aporta nada.</div>', quiz:null },
     { t:'Seguimiento a leads en 48h',
-      h:'<p>El peak de interés de alguien que conociste en un evento es inmediatamente después. Esperar más de 48h enfría el contacto.</p><p><strong>En las primeras 24h:</strong> cargá los leads en HubSpot con la nota de contexto.<br><strong>En las primeras 48h:</strong> primer contacto a los leads con interés alto y medio.</p><div class="ltip"><strong>Tip de mensaje:</strong> Mencioná algo específico de la conversación. "Me quedé pensando en lo que me contaste sobre [problema]..." Eso diferencia tu mensaje de 50 emails genéricos.</div>',
-      quiz:null }
+      h:'<p>El peak de interés es inmediatamente después. Esperar más de 48h enfría el contacto.</p><p><strong>24h:</strong> cargá los leads en HubSpot con la nota de contexto.<br><strong>48h:</strong> primer contacto a los leads con interés alto y medio.</p><div class="ltip"><strong>Tip:</strong> Mencioná algo específico de la conversación: "Me quedé pensando en lo que me contaste sobre [problema]..." Eso diferencia tu mensaje de 50 emails genéricos.</div>', quiz:null }
   ]}
 };
 
-// Build dynamic content based on admin config
+// ── Build personalized content based on admin config
 function buildLessons(key) {
   var ev = EVENTS[key] || {};
   var cfg = getAdminCfg(key);
-  var evTipo = ev.tipo === 'evergreen' ? 'Evergreen' : 'Transaccional';
-  var aliNombre = ev.organizer || (ev.nombre || 'El aliado');
 
   // Module 1 step 1: alianza context
-  var aliCtxHtml = cfg.aliCtx
-    ? '<div class="lok"><strong>Contexto específico de esta alianza:</strong> ' + cfg.aliCtx + '</div>'
-    : '<div class="ltip">El admin todavía no configuró el contexto de esta alianza.</div>';
-  var aliNoHtml = cfg.aliNo
-    ? '<div class="ldanger"><strong>Para este aliado — no hacer:</strong> ' + cfg.aliNo + '</div>'
-    : '';
+  var evTipo = ev.tipo === 'evergreen' ? 'Evergreen' : 'Transaccional';
+  var aliNom = ev.organizer || ev.nombre || 'el aliado';
+  var aliCtxHtml = cfg.aliCtx ? '<div class="lok"><strong>Contexto de esta alianza:</strong> '+cfg.aliCtx+'</div>' : '<div class="ltip">El admin todavía no configuró el contexto de esta alianza.</div>';
+  var aliNoHtml  = cfg.aliNo  ? '<div class="ldanger"><strong>Para este aliado — no hacer:</strong> '+cfg.aliNo+'</div>' : '';
   var compHtml = '';
   if (cfg.compromisos) {
     var items = cfg.compromisos.split('\n').filter(function(l){ return l.trim(); });
-    compHtml = '<p><strong>Compromisos pactados para verificar:</strong></p><ul style="margin:8px 0 0 16px;font-size:13px;line-height:1.8;">' +
-      items.map(function(i){ return '<li>' + i.trim() + '</li>'; }).join('') + '</ul>';
+    compHtml = '<p><strong>Compromisos pactados a verificar:</strong></p><ul style="margin:8px 0 0 16px;font-size:13px;line-height:1.8;">'+items.map(function(i){ return '<li>'+i.trim()+'</li>'; }).join('')+'</ul>';
   }
-  LESSONS[1].steps[1].h = '<p>El tipo de alianza con <strong>' + aliNombre + '</strong> es <strong>' + evTipo + '</strong>.</p>' +
-    (evTipo === 'Evergreen'
-      ? '<p><strong>Evergreen</strong> significa que este aliado usa Humand de forma continua, no solo para este evento. Ya nos conocen — el foco es profundizar la relación y mostrar novedades de producto.</p>'
-      : '<p><strong>Transaccional</strong> significa que el acuerdo es puntual. Es posible que el equipo del aliado no conozca bien a Humand — aprovechá para presentar el modelo claramente.</p>') +
+  LESSONS[1].steps[1].h = '<p>La alianza con <strong>'+aliNom+'</strong> es de tipo <strong>'+evTipo+'</strong>.</p>'+
+    (evTipo==='Evergreen' ? '<p><strong>Evergreen:</strong> este aliado usa Humand de forma continua. Ya nos conocen — el foco es profundizar y mostrar novedades de producto.</p>' : '<p><strong>Transaccional:</strong> acuerdo puntual. Es posible que el equipo del aliado no conozca bien a Humand — presentá el modelo claramente.</p>')+
     aliCtxHtml + aliNoHtml + compHtml;
 
-  // Module 3 step 0: ICP-personalized opening questions
-  var hasICP = cfg.icpRol || cfg.icpDolor;
-  if (hasICP) {
-    var icpSummary = '<div class="lok">';
-    if (cfg.icpRol)   icpSummary += '<strong>Rol:</strong> ' + cfg.icpRol + '<br>';
-    if (cfg.icpTam)   icpSummary += '<strong>Empresa:</strong> ' + cfg.icpTam + '<br>';
-    if (cfg.icpSect)  icpSummary += '<strong>Sector:</strong> ' + cfg.icpSect + '<br>';
-    if (cfg.icpPais)  icpSummary += '<strong>País/región:</strong> ' + cfg.icpPais + '<br>';
-    if (cfg.icpDolor) icpSummary += '<br><strong>Dolor principal:</strong> ' + cfg.icpDolor;
-    icpSummary += '</div>';
-    var ctxHtml = cfg.icpCtx ? '<div class="ltip"><strong>Contexto del evento:</strong> ' + cfg.icpCtx + '</div>' : '';
-
-    // Choose questions based on role
-    var rolLower = (cfg.icpRol || '').toLowerCase();
-    var isStrategic = rolLower.includes('director') || rolLower.includes('chro') || rolLower.includes('vp') || rolLower.includes('gerente general');
-    var q1, q2, q3;
-    if (isStrategic) {
-      q1 = '<strong>"¿Cómo está midiendo hoy el engagement o la experiencia del empleado?"</strong><br>Una pregunta estratégica para un interlocutor estratégico. Si no lo miden, abriste la conversación perfecta.';
-      q2 = '<strong>"¿Cuántos empleados tienen y cómo está estructurado el equipo de RR.HH.?"</strong><br>Les hacés pensar en escala, que es donde Humand genera más valor.';
-      q3 = '<strong>"¿Qué tan conectados están los empleados con la estrategia de la empresa?"</strong><br>Los lleva directo al dolor que resolvemos.';
+  // Module 3 step 0: ICP personalization
+  if (cfg.icpRol || cfg.icpDolor) {
+    var summary = '<div class="lok">';
+    if (cfg.icpRol)   summary += '<strong>Rol:</strong> '+cfg.icpRol+'<br>';
+    if (cfg.icpTam)   summary += '<strong>Empresa:</strong> '+cfg.icpTam+'<br>';
+    if (cfg.icpSect)  summary += '<strong>Sector:</strong> '+cfg.icpSect+'<br>';
+    if (cfg.icpPais)  summary += '<strong>País/región:</strong> '+cfg.icpPais+'<br>';
+    if (cfg.icpDolor) summary += '<br><strong>Dolor principal:</strong> '+cfg.icpDolor;
+    summary += '</div>';
+    var ctxHtml = cfg.icpCtx ? '<div class="ltip"><strong>Contexto del evento:</strong> '+cfg.icpCtx+'</div>' : '';
+    var rolLow = (cfg.icpRol||'').toLowerCase();
+    var isStrat = rolLow.indexOf('director')>=0||rolLow.indexOf('chro')>=0||rolLow.indexOf('vp ')>=0||rolLow.indexOf('gerente general')>=0||rolLow.indexOf('ceo')>=0;
+    var q1,q2,q3,qOpt,qOk;
+    if (isStrat) {
+      q1='<strong>"¿Cómo está midiendo hoy el engagement o la experiencia del empleado?"</strong><br>Si no lo miden, abriste la conversación perfecta.';
+      q2='<strong>"¿Cuántos empleados tienen y cómo está estructurado el equipo de RR.HH.?"</strong><br>Les hacés pensar en escala, donde Humand genera más valor.';
+      q3='<strong>"¿Qué tan conectados están los empleados con la estrategia de la empresa?"</strong><br>Los lleva directo al dolor que resolvemos.';
+      qOpt='"¿Cómo está midiendo hoy el engagement de su equipo?"';
     } else {
-      q1 = '<strong>"¿Cuántas personas tienen en su equipo?"</strong><br>Sabés si califican al instante, sin hablar de ventas.';
-      q2 = '<strong>"¿Cómo se enteran hoy los empleados de lo que pasa en la empresa?"</strong><br>Si dicen WhatsApp o email, encontraste el dolor.';
-      q3 = '<strong>"¿Trabajan con equipos en varias sedes o de forma remota?"</strong><br>Más sedes = más relevancia para Humand.';
+      q1='<strong>"¿Cuántas personas tienen en su equipo?"</strong><br>Sabés si califican al instante, sin hablar de ventas.';
+      q2='<strong>"¿Cómo se enteran hoy los empleados de lo que pasa en la empresa?"</strong><br>Si dicen WhatsApp o email, encontraste el dolor.';
+      q3='<strong>"¿Trabajan con equipos en varias sedes o de forma remota?"</strong><br>Más sedes = más relevancia para Humand.';
+      qOpt='"¿Cuántas personas tienen en su equipo?"';
     }
-
-    LESSONS[3].steps[0].h = '<p>Para este evento el perfil del asistente es específico — usá este contexto en cada conversación:</p>' +
-      icpSummary + ctxHtml +
-      '<p style="margin-top:14px;">Con este perfil en mente, las tres preguntas de apertura más efectivas son:</p>' +
-      '<p>' + [q1,q2,q3].join('</p><p>') + '</p>';
-
-    // Update quiz to match ICP
-    LESSONS[3].steps[2].h = '<p>Un ' + (cfg.icpRol || 'asistente') + ' se acerca a tu stand. Tenés 3 segundos. ¿Cuál es la mejor apertura para este perfil?</p>';
+    LESSONS[3].steps[0].h = '<p>Para este evento el perfil del asistente es específico — usá este contexto en cada conversación:</p>'+summary+ctxHtml+'<p style="margin-top:14px;"><strong>Las tres preguntas de apertura más efectivas para este perfil:</strong></p><p>'+[q1,q2,q3].join('</p><p>')+'</p>';
+    LESSONS[3].steps[2].h = '<p>Un '+( cfg.icpRol||'asistente')+' se acerca a tu stand. Tenés 3 segundos. ¿Cuál es la mejor apertura?</p>';
     LESSONS[3].steps[2].quiz = {
-      opts: [
-        '"Hola, ¿le explico qué hace Humand?"',
-        isStrategic ? '"¿Cómo está midiendo hoy el engagement de su equipo?"' : '"¿Cuántas personas tienen en su equipo?"',
-        '"Somos una plataforma de comunicación interna con IA y gestión de tareas."',
-        '"¿Le interesa mejorar la comunicación interna?"'
-      ],
-      ok: 1,
-      fb: [
-        '⚠️ Pone toda la carga en ellos. Pueden decir "no gracias" fácilmente.',
-        '✅ Pregunta directa al dolor de este perfil específico. Abre el diálogo.',
-        '❌ Muy técnico. Perdiste su atención en la segunda coma.',
-        '⚠️ Sí/no. Si dicen "ya lo tenemos", terminó la conversación.'
-      ]
+      opts:['"Hola, ¿le explico qué hace Humand?"', qOpt, '"Somos una plataforma de comunicación interna con IA y gestión de tareas."', '"¿Le interesa mejorar la comunicación interna?"'],
+      ok:1,
+      fb:['⚠️ Pone la carga en ellos. Pueden decir "no gracias".','✅ Pregunta directa al dolor de este perfil específico.','❌ Muy técnico. Perdiste su atención.','⚠️ Sí/no. Si dicen "ya lo tenemos", terminó.']
     };
   }
 }
 
-// ═══════════════════════════════════
-//  TRAINING UI
-// ═══════════════════════════════════
-var trState = JSON.parse(localStorage.getItem('hum_tr') || '{}');
-
+// ── TRAINING UI
 function updateTrainingUI() {
-  var done = 0;
-  for (var i = 1; i <= 5; i++) {
-    var ok = trState['m'+i] === 'done';
-    if (ok) done++;
-    var card  = document.getElementById('mc-'+i);
-    var badge = document.getElementById('mb-'+i);
-    var prog  = document.getElementById('mp-'+i);
-    if (card)  card.classList.toggle('done', ok);
-    if (badge) { badge.textContent = ok ? '✓ Completado' : 'Nuevo'; badge.className = 'mc-badge ' + (ok ? 'bd' : 'bn'); }
-    if (prog)  prog.style.width = ok ? '100%' : '0%';
+  var done=0;
+  for (var i=1;i<=5;i++) {
+    var ok=trState['m'+i]==='done';
+    if(ok) done++;
+    var card=document.getElementById('mc-'+i); if(card) card.classList.toggle('done',ok);
+    var badge=document.getElementById('mb-'+i); if(badge){ badge.textContent=ok?'✓ Completado':'Nuevo'; badge.className='mc-badge '+(ok?'bd':'bn'); }
+    var prog=document.getElementById('mp-'+i); if(prog) prog.style.width=ok?'100%':'0%';
   }
-  var de = document.getElementById('tr-done'); if (de) de.textContent = done;
-  var pe = document.getElementById('tr-pct');  if (pe) pe.textContent = Math.round(done/5*100)+'%';
+  var de=document.getElementById('tr-done'); if(de) de.textContent=done;
+  var pe=document.getElementById('tr-pct');  if(pe) pe.textContent=Math.round(done/5*100)+'%';
 }
 
-// ═══════════════════════════════════
-//  LESSON ENGINE
-// ═══════════════════════════════════
-var curL = null, curS = 0, qDone = false;
+// ── LESSON ENGINE
+function openLesson(id){ curL=id; curS=0; qDone=false; var L=LESSONS[id]; document.getElementById('lIcon').textContent=L.icon; document.getElementById('lTitle').textContent=L.title; renderStep(); document.getElementById('lovEl').classList.add('open'); }
+function closeLesson(){ document.getElementById('lovEl').classList.remove('open'); }
 
-function openLesson(id) {
-  curL = id; curS = 0; qDone = false;
-  var L = LESSONS[id];
-  document.getElementById('lIcon').textContent = L.icon;
-  document.getElementById('lTitle').textContent = L.title;
-  renderStep();
-  document.getElementById('lovEl').classList.add('open');
+function renderStep(){
+  var L=LESSONS[curL]; var s=L.steps[curS]; var tot=L.steps.length;
+  document.getElementById('lSub').textContent='Paso '+(curS+1)+' de '+tot;
+  var dots=''; for(var i=0;i<tot;i++){ var cls=i<curS?'sdot sd':i===curS?'sdot sa':'sdot'; dots+='<div class="'+cls+'"></div>'; }
+  document.getElementById('lDots').innerHTML=dots;
+  var html='<div class="lst-title">'+s.t+'</div><div class="lst-content">'+s.h+'</div>';
+  if(s.quiz){ html+='<div class="qopts">'; s.quiz.opts.forEach(function(opt,i){ html+='<button class="qopt" id="qo'+i+'" onclick="answerQ('+i+')">'+opt+'</button>'; }); html+='</div><div class="qfb" id="qfb"></div>'; }
+  document.getElementById('lBody').innerHTML=html;
+  var bk=document.getElementById('lBk'); var nx=document.getElementById('lNx');
+  bk.style.display=curS===0?'none':'';
+  nx.textContent=curS===tot-1?'✓ Completar módulo':'Siguiente →';
+  nx.disabled=s.quiz&&!qDone;
 }
 
-function closeLesson() { document.getElementById('lovEl').classList.remove('open'); }
-
-function renderStep() {
-  var L = LESSONS[curL];
-  var s = L.steps[curS];
-  var tot = L.steps.length;
-  document.getElementById('lSub').textContent = 'Paso ' + (curS+1) + ' de ' + tot;
-
-  // dots
-  var dots = '';
-  for (var i = 0; i < tot; i++) {
-    var cls = i < curS ? 'sdot sd' : i === curS ? 'sdot sa' : 'sdot';
-    dots += '<div class="'+cls+'"></div>';
-  }
-  document.getElementById('lDots').innerHTML = dots;
-
-  // body
-  var html = '<div class="lst-title">'+s.t+'</div><div class="lst-content">'+s.h+'</div>';
-  if (s.quiz) {
-    html += '<div class="qopts">';
-    s.quiz.opts.forEach(function(opt, i) {
-      html += '<button class="qopt" id="qo'+i+'" onclick="answerQ('+i+')">'+opt+'</button>';
-    });
-    html += '</div><div class="qfb" id="qfb"></div>';
-  }
-  document.getElementById('lBody').innerHTML = html;
-
-  var bk = document.getElementById('lBk');
-  var nx = document.getElementById('lNx');
-  bk.style.display = curS === 0 ? 'none' : '';
-  nx.textContent = curS === tot-1 ? '✓ Completar módulo' : 'Siguiente →';
-  nx.disabled = s.quiz && !qDone;
+function answerQ(idx){
+  if(qDone) return;
+  var s=LESSONS[curL].steps[curS]; var ok=s.quiz.ok;
+  s.quiz.opts.forEach(function(_,i){ var btn=document.getElementById('qo'+i); if(i===ok) btn.classList.add('qok'); else if(i===idx) btn.classList.add('qno'); btn.disabled=true; });
+  var fb=document.getElementById('qfb'); fb.textContent=s.quiz.fb[idx]; fb.className='qfb show '+(idx===ok?'lok':'ldanger');
+  qDone=true; document.getElementById('lNx').disabled=false;
 }
 
-function answerQ(idx) {
-  if (qDone) return;
-  var s = LESSONS[curL].steps[curS];
-  var ok = s.quiz.ok;
-  s.quiz.opts.forEach(function(_, i) {
-    var btn = document.getElementById('qo'+i);
-    if (i === ok) btn.classList.add('qok');
-    else if (i === idx) btn.classList.add('qno');
-    btn.disabled = true;
-  });
-  var fb = document.getElementById('qfb');
-  fb.textContent = s.quiz.fb[idx];
-  fb.className = 'qfb show ' + (idx === ok ? 'lok' : 'ldanger');
-  qDone = true;
-  document.getElementById('lNx').disabled = false;
-}
-
-function lNext() {
-  var L = LESSONS[curL];
-  if (curS < L.steps.length - 1) { curS++; qDone = false; renderStep(); }
+function lNext(){
+  var L=LESSONS[curL];
+  if(curS<L.steps.length-1){ curS++; qDone=false; renderStep(); }
   else {
-    trState['m'+curL] = 'done';
-    localStorage.setItem('hum_tr', JSON.stringify(trState));
-    closeLesson(); updateTrainingUI();
+    trState['m'+curL]='done';
+    localStorage.setItem('hum_tr',JSON.stringify(trState));
+    closeLesson();
+    updateTrainingUI();
+    saveTrainingToSheet();
   }
 }
 
-function lPrev() { if (curS > 0) { curS--; qDone = true; renderStep(); } }
+function saveTrainingToSheet() {
+  if (typeof syncEnabled === 'undefined' || !syncEnabled || !currentEventKey) return;
+  var done = Object.keys(trState).filter(function(k){ return trState[k]==='done'; }).length;
+  var userName = getUserName();
+  if (!userName) return;
+  apiCall(null, {
+    action: 'saveChecklistItem',
+    evento_key: currentEventKey,
+    evento_nombre: currentEvent ? currentEvent.nombre : '',
+    item_id: 'training_' + userName.replace(/\s+/g,'_'),
+    item_label: 'Training — ' + done + '/5 módulos completados',
+    checked: done >= 5,
+    usuario: userName,
+  });
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-  var lov = document.getElementById('lovEl');
-  if (lov) lov.addEventListener('click', function(e){ if(e.target===this) closeLesson(); });
+function lPrev(){ if(curS>0){ curS--; qDone=true; renderStep(); } }
+
+// ── INIT
+window.addEventListener('DOMContentLoaded', function(){
+  var stored=localStorage.getItem('humand_bdr_user');
+  if(stored){ var inp=document.getElementById('userName'); if(inp) inp.value=stored; var lcN=document.getElementById('lcNombre'); if(lcN) lcN.value=stored; }
+  try { trState=JSON.parse(localStorage.getItem('hum_tr')||'{}'); } catch(e){}
+  updateTrainingUI();
+  var lcInp=document.getElementById('lcInput');
+  if(lcInp) lcInp.addEventListener('keydown',function(e){ if(e.key==='Enter') doLogin(); });
+  var lov=document.getElementById('lovEl');
+  if(lov) lov.addEventListener('click',function(e){ if(e.target===this) closeLesson(); });
 });
+
+// ═══════════════════════════════════════════════
+//  DEFAULT SCENARIOS (base content for escalamiento)
+// ═══════════════════════════════════════════════
+var DEFAULT_SCENARIOS = [
+  { id:'s1', severity:'critico', problem:'El stand no está listo o lo pusieron en un lugar sin tráfico',
+    steps:['Sacar foto de inmediato (evidencia de ubicación y estado al llegar)','Contactar al organizador: "El stand quedó en una zona sin tráfico, necesito que lo reubiquemos antes de que arranque"','Si no lo mueven, escalar al área de eventos con la foto ahora mismo — no al final del evento','Si el stand no se puede mover, salir activamente al evento — no quedarse esperando'] },
+  { id:'s2', severity:'critico', problem:'El aliado no sabe quién es Humand / los organizadores no conocen el acuerdo',
+    steps:['Sin confrontación. Preguntar con calma: "¿Hablo con [nombre del contacto]? Somos los aliados tecnológicos del evento"','Si el contacto no está presente, pedir al organizador que lo llame en ese momento','Escalar al área de eventos por WhatsApp con el nombre del organizador con quien estás hablando','No improvisar el acuerdo ni aceptar condiciones distintas sin consultar primero'] },
+  { id:'s3', severity:'urgente', problem:'Hay poco flujo de personas en el stand',
+    steps:['Esperar 30 minutos para saber si es por el momento del día o es estructural','Si es estructural: salir a circular. El stand es base de operaciones, no el único punto de contacto','Pedir al organizador que haga un anuncio desde el escenario dirigiendo asistentes a la zona de exhibición','Registrar las conversaciones generadas igual — el stand vacío no es sinónimo de evento fallido'] },
+  { id:'s4', severity:'urgente', problem:'El evento no tiene perfil de RRHH / asistentes que no son el target',
+    steps:['No forzar la conversación de ventas con perfiles que no son el target','Buscar activamente perfiles relevantes: preguntar al organizador quiénes son los asistentes de RRHH o líderes de equipo','Registrar el perfil real del evento en el debrief — es información valiosa para decidir si repetimos con este aliado'] },
+  { id:'s5', severity:'urgente', problem:'El organizador no menciona a Humand durante el sorteo de AirPods',
+    steps:['Acercarse al organizador en el siguiente break: "Faltó mencionar a Humand durante el sorteo — ¿podemos hacer una mención breve antes del próximo corte?"','Documentar lo que pasó (quién anunció el sorteo, qué dijo exactamente)','Escalar al área de eventos con el detalle para que quede registro del incumplimiento'] }
+];
+
+// ── Code preview
+function updateCodePreview() {
+  var inp = document.getElementById('aAccCode');
+  var preview = document.getElementById('aAccCodePreview');
+  var val = document.getElementById('aAccCodeVal');
+  if (!inp) return;
+  var code = inp.value.trim().toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,10);
+  inp.value = code;
+  if (preview) preview.style.display = code ? 'block' : 'none';
+  if (val) val.textContent = code;
+}
+
+// Wire preview on input
+document.addEventListener('DOMContentLoaded', function() {
+  var inp = document.getElementById('aAccCode');
+  if (inp) inp.addEventListener('input', updateCodePreview);
+});
+
+// ── Build a global code→eventKey map from all admin configs
+function buildCodeMap() {
+  var map = {};
+  Object.keys(EVENTS).forEach(function(key) {
+    // Also allow numeric codes (ev_84 → "84")
+    var num = key.replace('ev_','');
+    map[num] = key;
+    // Check if admin assigned a custom code
+    try {
+      var cfg = JSON.parse(localStorage.getItem('hum_adm_' + key) || '{}');
+      if (cfg.accCode) map[cfg.accCode.toUpperCase()] = key;
+    } catch(e) {}
+  });
+  return map;
+}
+
+// ── DASHBOARD auto-refresh
+var dashInterval = null;
+var dashCountdown = 60;
+var dashCountdownTimer = null;
+
+function startDashAutoRefresh() {
+  stopDashAutoRefresh();
+  dashCountdown = 60;
+  updateDashCountdown();
+  dashCountdownTimer = setInterval(function() {
+    dashCountdown--;
+    updateDashCountdown();
+    if (dashCountdown <= 0) {
+      dashCountdown = 60;
+      loadDashboard();
+    }
+  }, 1000);
+}
+
+function stopDashAutoRefresh() {
+  if (dashCountdownTimer) { clearInterval(dashCountdownTimer); dashCountdownTimer = null; }
+}
+
+function updateDashCountdown() {
+  var el = document.getElementById('db-countdown');
+  if (el) el.textContent = 'Auto-actualiza en ' + dashCountdown + 's';
+}
+
+function manualRefresh() {
+  dashCountdown = 60;
+  updateDashCountdown();
+  loadDashboard();
+}
+
+// Get scenarios for current event (custom or default)
+function getScenarios(key) {
+  if (!key) return DEFAULT_SCENARIOS;
+  try {
+    var stored = localStorage.getItem('hum_sc_' + key);
+    if (stored) return JSON.parse(stored);
+  } catch(e) {}
+  return DEFAULT_SCENARIOS;
+}
+
+function saveScenarioData(key, scenarios) {
+  if (!key) return;
+  localStorage.setItem('hum_sc_' + key, JSON.stringify(scenarios));
+}
+
+// ── Render BDR view of escalamiento (read-only)
+function renderEscalamiento(key) {
+  var grid = document.getElementById('escal-grid');
+  var staticGrid = document.getElementById('escal-grid-static');
+  if (!grid) return;
+  var scenarios = getScenarios(key);
+  if (staticGrid) staticGrid.style.display = 'none';
+  var html = '';
+  scenarios.forEach(function(sc) {
+    var badgeClass = sc.severity === 'critico' ? 'badge-red' : 'badge-warn';
+    var badgeLabel = sc.severity === 'critico' ? '🔴 Crítico' : '🟡 Urgente';
+    var stepsHtml = sc.steps.map(function(step, i) {
+      return '<div class="step"><div class="step-num">'+(i+1)+'</div><div class="step-text">'+escHtml(step)+'</div></div>';
+    }).join('');
+    html += '<div class="scenario-card"><div class="scenario-head" onclick="toggleScenario(this.parentElement)"><span class="scenario-badge '+badgeClass+'">'+badgeLabel+'</span><span class="scenario-problem">'+escHtml(sc.problem)+'</span><span class="chevron">▼</span></div><div class="scenario-body"><div class="step-list">'+stepsHtml+'</div></div></div>';
+  });
+  grid.innerHTML = html || '<p style="color:var(--muted);font-size:13px;padding:16px 0;">No hay escenarios configurados para este evento.</p>';
+}
+
+function escHtml(str) {
+  return (str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Render admin scenario editor
+function renderScenarioEditor(key) {
+  var list = document.getElementById('sc-editor-list');
+  if (!list) return;
+  var scenarios = getScenarios(key);
+  var countLbl = document.getElementById('sc-count-lbl');
+  if (countLbl) countLbl.textContent = scenarios.length + ' escenario' + (scenarios.length !== 1 ? 's' : '');
+
+  list.innerHTML = scenarios.map(function(sc, idx) {
+    var stepsHtml = sc.steps.map(function(step, si) {
+      return '<div class="sc-step-row"><div class="sc-step-num">'+(si+1)+'</div><textarea class="sc-step-inp" data-sc="'+idx+'" data-si="'+si+'" rows="2">'+escHtml(step)+'</textarea><button class="sc-step-del" onclick="removeStep('+idx+','+si+')" title="Eliminar paso">✕</button></div>';
+    }).join('');
+    return '<div class="sc-card-edit" data-idx="'+idx+'">'+
+      '<div class="sc-card-edit-head">'+
+      '<select class="sc-severity-sel" data-sc="'+idx+'">'+
+        '<option value="critico"'+(sc.severity==='critico'?' selected':'')+'>🔴 Crítico</option>'+
+        '<option value="urgente"'+(sc.severity==='urgente'?' selected':'')+'>🟡 Urgente</option>'+
+      '</select>'+
+      '<input class="sc-title-inp" data-sc="'+idx+'" value="'+escHtml(sc.problem)+'" placeholder="Descripción del problema">'+
+      '<button class="sc-del-btn" onclick="removeScenario('+idx+')">✕ Eliminar</button>'+
+      '</div>'+
+      '<div class="sc-steps-label">Pasos de acción</div>'+
+      stepsHtml+
+      '<button class="sc-add-step-btn" onclick="addStep('+idx+')">+ Agregar paso</button>'+
+    '</div>';
+  }).join('');
+}
+
+function readScenariosFromEditor() {
+  var list = document.getElementById('sc-editor-list');
+  if (!list) return [];
+  var cards = list.querySelectorAll('.sc-card-edit');
+  var result = [];
+  cards.forEach(function(card, idx) {
+    var sel = card.querySelector('.sc-severity-sel');
+    var inp = card.querySelector('.sc-title-inp');
+    var stepInps = card.querySelectorAll('.sc-step-inp');
+    var steps = [];
+    stepInps.forEach(function(si) { if (si.value.trim()) steps.push(si.value.trim()); });
+    result.push({ id: 's_'+Date.now()+'_'+idx, severity: sel ? sel.value : 'urgente', problem: inp ? inp.value.trim() : '', steps: steps });
+  });
+  return result;
+}
+
+function addScenario() {
+  var scenarios = readScenariosFromEditor();
+  scenarios.push({ id: 's_new_'+Date.now(), severity: 'urgente', problem: '', steps: [''] });
+  renderScenarioEditor_from(scenarios);
+}
+
+function removeScenario(idx) {
+  var scenarios = readScenariosFromEditor();
+  scenarios.splice(idx, 1);
+  renderScenarioEditor_from(scenarios);
+}
+
+function addStep(scIdx) {
+  var scenarios = readScenariosFromEditor();
+  if (scenarios[scIdx]) { scenarios[scIdx].steps.push(''); renderScenarioEditor_from(scenarios); }
+}
+
+function removeStep(scIdx, stepIdx) {
+  var scenarios = readScenariosFromEditor();
+  if (scenarios[scIdx]) { scenarios[scIdx].steps.splice(stepIdx, 1); renderScenarioEditor_from(scenarios); }
+}
+
+function renderScenarioEditor_from(scenarios) {
+  // Save to temp and re-render
+  var list = document.getElementById('sc-editor-list');
+  if (!list) return;
+  var countLbl = document.getElementById('sc-count-lbl');
+  if (countLbl) countLbl.textContent = scenarios.length + ' escenario' + (scenarios.length !== 1 ? 's' : '');
+  list.innerHTML = scenarios.map(function(sc, idx) {
+    var stepsHtml = (sc.steps||['']).map(function(step, si) {
+      return '<div class="sc-step-row"><div class="sc-step-num">'+(si+1)+'</div><textarea class="sc-step-inp" data-sc="'+idx+'" data-si="'+si+'" rows="2">'+escHtml(step)+'</textarea><button class="sc-step-del" onclick="removeStep('+idx+','+si+')" title="Eliminar paso">✕</button></div>';
+    }).join('');
+    return '<div class="sc-card-edit" data-idx="'+idx+'">'+
+      '<div class="sc-card-edit-head">'+
+      '<select class="sc-severity-sel" data-sc="'+idx+'">'+
+        '<option value="critico"'+(sc.severity==='critico'?' selected':'')+'>🔴 Crítico</option>'+
+        '<option value="urgente"'+(sc.severity==='urgente'?' selected':'')+'>🟡 Urgente</option>'+
+      '</select>'+
+      '<input class="sc-title-inp" data-sc="'+idx+'" value="'+escHtml(sc.problem)+'" placeholder="Descripción del problema">'+
+      '<button class="sc-del-btn" onclick="removeScenario('+idx+')">✕ Eliminar</button>'+
+      '</div>'+
+      '<div class="sc-steps-label">Pasos de acción</div>'+
+      stepsHtml+
+      '<button class="sc-add-step-btn" onclick="addStep('+idx+')">+ Agregar paso</button>'+
+    '</div>';
+  }).join('');
+}
+
+function saveScenarios() {
+  if (!currentEventKey) return;
+  var scenarios = readScenariosFromEditor();
+  saveScenarioData(currentEventKey, scenarios);
+  renderEscalamiento(currentEventKey);
+  var msg = document.getElementById('sc-save-msg');
+  if (msg) { msg.style.display='inline'; setTimeout(function(){ msg.style.display='none'; }, 3000); }
+}
+
+function resetScenarios() {
+  if (!currentEventKey || !confirm('¿Restaurar los escenarios originales de Humand para este evento?')) return;
+  localStorage.removeItem('hum_sc_' + currentEventKey);
+  renderScenarioEditor(currentEventKey);
+  renderEscalamiento(currentEventKey);
+}
+
+// ═══════════════════════════════════════════════
+//  DASHBOARD
+// ═══════════════════════════════════════════════
+// Critical checklist item IDs
+var CRITICAL_ITEMS = ['item-1','item-2','item-3','item-8','item-9','item-13','item-14'];
+
+function loadDashboard() {
+  if (!currentEventKey) {
+    document.getElementById('db-tbody').innerHTML = '<tr><td colspan="6" class="db-empty">Seleccioná un evento primero.</td></tr>';
+    return;
+  }
+  var ev = EVENTS[currentEventKey] || {};
+  var nameEl = document.getElementById('db-evento-nombre');
+  if (nameEl) nameEl.textContent = ev.nombre || currentEventKey;
+
+  if (typeof APPS_SCRIPT_URL !== 'undefined' && APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'PEGAR_URL_AQUI') {
+    loadDashboardFromSheet();
+  } else {
+    loadDashboardLocal();
+  }
+}
+
+async function loadDashboardFromSheet() {
+  var tbody = document.getElementById('db-tbody');
+  if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="db-empty" id="db-loading-msg">⏳ Conectando con Google Sheets...</td></tr>';
+
+  // Fetch directly — don't rely on syncEnabled (admin may not have gone through initSync)
+  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === 'PEGAR_URL_AQUI') {
+    var msg = document.getElementById('db-loading-msg');
+    if (msg) msg.textContent = '⚠️ Apps Script no configurado. Sin datos disponibles.';
+    return;
+  }
+
+  try {
+    var baseUrl = APPS_SCRIPT_URL;
+
+    var [checkResp, leadsResp] = await Promise.all([
+      fetch(baseUrl + '?' + new URLSearchParams({ action: 'getChecklist', evento_key: currentEventKey }).toString()),
+      fetch(baseUrl + '?' + new URLSearchParams({ action: 'getLeads', evento_key: currentEventKey }).toString())
+    ]);
+
+    var checkData = await checkResp.json();
+    var leadsData  = await leadsResp.json();
+
+    // Debug: show raw response in console
+    console.log('[Dashboard] checkData:', checkData);
+    console.log('[Dashboard] leadsData:', leadsData);
+
+    if (!checkData && !leadsData) {
+      var msg = document.getElementById('db-loading-msg');
+      if (msg) msg.textContent = '⚠️ Sin respuesta del Sheet. Verificá la conexión.';
+      loadDashboardLocal();
+      return;
+    }
+
+    if (!checkData || !checkData.ok) checkData = { ok: true, items: [] };
+    if (!leadsData  || !leadsData.ok)  leadsData  = { ok: true, leads: [] };
+
+    renderDashboard(checkData, leadsData);
+
+  } catch(e) {
+    console.error('[Dashboard] Error:', e);
+    var msg = document.getElementById('db-loading-msg');
+    if (msg) msg.textContent = '⚠️ Error: ' + (e.message || 'conexión fallida') + '. Mostrando datos locales.';
+    loadDashboardLocal();
+  }
+}
+
+function loadDashboardLocal() {
+  // Read local checklist state from the DOM (checked items)
+  var allItems = document.querySelectorAll('.check-item[data-item-id]');
+  var totalItems = allItems.length;
+  var checkedItems = document.querySelectorAll('.check-item.checked[data-item-id]');
+
+  // Get current user name
+  var userName = localStorage.getItem('humand_bdr_user') || 'Tú';
+  var checkPct = totalItems > 0 ? Math.round(checkedItems.length / totalItems * 100) : 0;
+
+  // Get leads from current session
+  var localLeads = typeof leads !== 'undefined' ? leads : [];
+  var myLeads = localLeads.length;
+
+  // Get training
+  var tr = {};
+  try { tr = JSON.parse(localStorage.getItem('hum_tr') || '{}'); } catch(e) {}
+  var trDone = Object.values(tr).filter(function(v){ return v === 'done'; }).length;
+
+  // Missing critical items
+  var missingCritical = CRITICAL_ITEMS.filter(function(id) {
+    var el = document.querySelector('.check-item[data-item-id="'+id+'"]');
+    return el && !el.classList.contains('checked');
+  });
+
+  var bdrList = [{
+    name: userName,
+    checkPct: checkPct,
+    checked: checkedItems.length,
+    total: totalItems,
+    leads: myLeads,
+    trDone: trDone,
+    lastSeen: new Date().toLocaleDateString('es-CO'),
+    missingCritical: missingCritical
+  }];
+
+  renderDashboardRows(bdrList, [bdrList[0].missingCritical.length > 0 && checkPct > 0 ? bdrList[0] : null].filter(Boolean));
+
+  // Show note that this is local data
+  var alertsEl = document.getElementById('db-alerts');
+  if (alertsEl) {
+    var note = '<div class="alert alert-blue" style="margin-top:16px;font-size:12px;"><strong>Modo local.</strong> Estás viendo tus propios datos de esta sesión. Cuando el Sheet esté conectado, el admin puede ver el avance de todos los BDRs.</div>';
+    alertsEl.innerHTML = note + (alertsEl.innerHTML || '');
+  }
+}
+
+function renderDashboard(checkData, leadsData) {
+  // Group checklist items by user
+  var bdrMap = {};
+  var allItemEls = document.querySelectorAll('.check-item[data-item-id]');
+  var totalItems = allItemEls.length;
+
+  if (checkData && checkData.ok && checkData.items && checkData.items.length) {
+    checkData.items.forEach(function(item) {
+      var user = item.usuario || item.user || 'Sin nombre';
+      if (!bdrMap[user]) bdrMap[user] = { name: user, checkedIds: new Set(), leads: 0, trDone: 0, lastSeen: item.timestamp || item.fecha || '—' };
+
+      // Training items stored separately
+      if (item.item_id && item.item_id.indexOf('training_') === 0) {
+        // Parse "Training — X/5 módulos completados"
+        var match = (item.item_label || '').match(/(\d+)\/5/);
+        if (match) bdrMap[user].trDone = parseInt(match[1], 10);
+        return;
+      }
+
+      if (item.checked === true || item.checked === 'TRUE' || item.checked === 'true') {
+        bdrMap[user].checkedIds.add(item.item_id);
+      }
+      if (item.timestamp && (!bdrMap[user].lastSeen || item.timestamp > bdrMap[user].lastSeen)) {
+        bdrMap[user].lastSeen = item.timestamp;
+      }
+    });
+  }
+
+  if (leadsData && leadsData.ok && leadsData.leads && leadsData.leads.length) {
+    leadsData.leads.forEach(function(lead) {
+      var user = lead.registrado_por || lead.usuario || 'Sin nombre';
+      if (!bdrMap[user]) bdrMap[user] = { name: user, checkedIds: new Set(), leads: 0, trDone: 0, lastSeen: lead.fecha_registro || '—' };
+      bdrMap[user].leads++;
+    });
+  }
+
+  if (!Object.keys(bdrMap).length) {
+    // No data in sheet for this event yet
+    document.getElementById('db-tbody').innerHTML = '<tr><td colspan="6" class="db-empty">📭 Todavía no hay actividad registrada para este evento en el Sheet.<br><span style="font-size:12px;color:var(--muted2);">Los datos aparecen cuando los BDRs marcan ítems del checklist o registran leads.</span></td></tr>';
+    var kv = document.getElementById('db-kpi-bdrs'); if(kv) kv.textContent = '0';
+    var ka = document.getElementById('db-kpi-avg'); if(ka) ka.textContent = '—';
+    var kl = document.getElementById('db-kpi-leads'); if(kl) kl.textContent = '0';
+    var kal = document.getElementById('db-kpi-alertas'); if(kal) kal.textContent = '—';
+    return;
+  }
+
+  var bdrList = Object.values(bdrMap).map(function(bdr) {
+    var checked = bdr.checkedIds ? bdr.checkedIds.size : 0;
+    var pct = totalItems > 0 ? Math.round(checked / totalItems * 100) : 0;
+    var missingCritical = CRITICAL_ITEMS.filter(function(id) { return !bdr.checkedIds || !bdr.checkedIds.has(id); });
+    return { name: bdr.name, checkPct: pct, checked: checked, total: totalItems, leads: bdr.leads, trDone: bdr.trDone || 0, lastSeen: bdr.lastSeen, missingCritical: missingCritical };
+  });
+
+  var withAlerts = bdrList.filter(function(b){ return b.missingCritical && b.missingCritical.length > 0 && b.checkPct > 0; });
+  renderDashboardRows(bdrList, withAlerts);
+}
+
+function renderDashboardRows(bdrList, bdrWithAlerts) {
+  // KPIs
+  var realBdrs = bdrList.filter(function(b){ return b.name !== '(Sin datos aún)'; });
+  var totalLeads = bdrList.reduce(function(s,b){ return s+(b.leads||0); }, 0);
+  var avgPct = bdrList.length ? Math.round(bdrList.reduce(function(s,b){ return s+(b.checkPct||0); }, 0) / bdrList.length) : 0;
+  var alertCount = (bdrWithAlerts||[]).length;
+
+  var kv = document.getElementById('db-kpi-bdrs'); if(kv) kv.textContent = realBdrs.length || '—';
+  var ka = document.getElementById('db-kpi-avg'); if(ka) ka.textContent = avgPct + '%';
+  var kl = document.getElementById('db-kpi-leads'); if(kl) kl.textContent = totalLeads;
+  var kal = document.getElementById('db-kpi-alertas'); if(kal) kal.textContent = alertCount;
+
+  // Table
+  var tbody = document.getElementById('db-tbody');
+  if (!tbody) return;
+
+  tbody.innerHTML = bdrList.map(function(bdr) {
+    var pct = bdr.checkPct || 0;
+    var barClass = pct >= 80 ? 'db-bar-ok' : pct >= 50 ? 'db-bar-warn' : 'db-bar-low';
+    var badgeClass = pct >= 80 ? 'db-badge-ok' : pct >= 50 ? 'db-badge-warn' : pct > 0 ? 'db-badge-low' : 'db-badge-na';
+    var badgeLabel = pct >= 80 ? '✓ Al día' : pct >= 50 ? 'En progreso' : pct > 0 ? 'Bajo' : 'Sin iniciar';
+    var trCol = bdr.trDone !== null && bdr.trDone !== undefined
+      ? '<span class="db-badge '+(bdr.trDone>=3?'db-badge-ok':bdr.trDone>0?'db-badge-warn':'db-badge-na')+'">'+bdr.trDone+'/5</span>'
+      : '<span class="db-badge db-badge-na">—</span>';
+    var lastSeen = bdr.lastSeen || '—';
+    // Format timestamp if it's ISO
+    try { if (lastSeen.includes('T')) lastSeen = new Date(lastSeen).toLocaleDateString('es-CO'); } catch(e) {}
+    return '<tr>'+
+      '<td><strong>'+escHtml(bdr.name)+'</strong></td>'+
+      '<td>'+
+        '<div class="db-bar-wrap"><div class="db-bar-fill '+barClass+'" style="width:'+pct+'%"></div></div>'+
+        ' '+pct+'%'+
+        (bdr.total ? ' <span style="font-size:11px;color:var(--muted);">('+( bdr.checked||0)+'/'+bdr.total+')</span>' : '')+
+      '</td>'+
+      '<td>'+(bdr.leads||0)+'</td>'+
+      '<td>'+trCol+'</td>'+
+      '<td style="font-size:12px;color:var(--muted);">'+escHtml(lastSeen)+'</td>'+
+      '<td><span class="db-badge '+badgeClass+'">'+badgeLabel+'</span></td>'+
+    '</tr>';
+  }).join('');
+
+  // Alerts section
+  var alertsEl = document.getElementById('db-alerts');
+  if (alertsEl) {
+    if (!bdrWithAlerts || !bdrWithAlerts.length) {
+      alertsEl.innerHTML = bdrList.length ? '<div class="alert alert-ok" style="font-size:12px;">✓ Sin alertas críticas — todos los BDRs tienen sus ítems críticos al día.</div>' : '';
+      return;
+    }
+    var html = '<div class="db-section-title" style="margin-top:0;">⚠️ Alertas — ítems críticos sin completar</div>';
+    bdrWithAlerts.forEach(function(bdr) {
+      if (!bdr.missingCritical || !bdr.missingCritical.length) return;
+      // Map item IDs to readable labels
+      var itemLabels = {
+        'item-1':'Leí el brief del evento','item-2':'Conozco el tipo de alianza',
+        'item-3':'Tengo el contacto del organizador','item-8':'Llegué 45 min antes y verifiqué el stand',
+        'item-9':'Me presenté con el organizador','item-13':'Envié el debrief','item-14':'Hice seguimiento a leads en 48h'
+      };
+      var labels = bdr.missingCritical.map(function(id){ return itemLabels[id] || id; }).join(' · ');
+      html += '<div class="db-alert-item"><div class="db-alert-icon">🚨</div><div><strong>'+escHtml(bdr.name)+'</strong> — sin completar: '+labels+'</div></div>';
+    });
+    alertsEl.innerHTML = html;
+  }
+}
+
+// ── Hook into loadEvent to trigger dashboard + scenarios
+var _prevLoadEvent = window.loadEvent;
+window.loadEvent = function(key) {
+  _prevLoadEvent(key);
+  // Render escalamiento from stored/default scenarios
+  renderEscalamiento(key);
+  // If admin, render editor + dashboard
+  if (isAdmin) {
+    renderScenarioEditor(key);
+    var dashTab = document.getElementById('dashNavTab');
+    if (dashTab) dashTab.style.display = '';
+    loadDashboard();
+    if (document.getElementById('tab-dashboard') && document.getElementById('tab-dashboard').classList.contains('active')) {
+      if (typeof startDashAutoRefresh === 'function') startDashAutoRefresh();
+    }
+  }
+};
+
+// ── Admin password system
+var ADMIN_PASS_KEY = 'hum_admin_pass';
+var ADMIN_PASS_DEFAULT_HASH = '7e2a5c3f9b4d1e6a8c2f5b9d3e7a1c4f6b8d2e5a9c3f7b1d4e6a8c2f5b9d3e7'; // placeholder
+
+async function hashPass(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+async function checkAdminPass(input) {
+  var stored = localStorage.getItem(ADMIN_PASS_KEY);
+  var inputHash = await hashPass(input);
+  if (!stored) {
+    // No password set yet — accept default "humand2025" and save its hash
+    var defaultHash = await hashPass('humand2025');
+    if (inputHash === defaultHash) {
+      localStorage.setItem(ADMIN_PASS_KEY, defaultHash);
+      return true;
+    }
+    return false;
+  }
+  return inputHash === stored;
+}
+
+async function changeAdminPass() {
+  var p1 = document.getElementById('aNewPass').value;
+  var p2 = document.getElementById('aNewPass2').value;
+  var msg = document.getElementById('passChangeMsg');
+  if (!p1 || p1.length < 8) { msg.style.display='inline'; msg.style.color='var(--danger)'; msg.textContent='Mínimo 8 caracteres.'; return; }
+  if (p1 !== p2) { msg.style.display='inline'; msg.style.color='var(--danger)'; msg.textContent='Las contraseñas no coinciden.'; return; }
+  var hash = await hashPass(p1);
+  localStorage.setItem(ADMIN_PASS_KEY, hash);
+  document.getElementById('aNewPass').value = '';
+  document.getElementById('aNewPass2').value = '';
+  msg.style.display='inline'; msg.style.color='var(--ok)'; msg.textContent='✓ Contraseña actualizada.';
+  setTimeout(function(){ msg.style.display='none'; }, 3000);
+}
+
+function toggleAdminPass(show) {
+  document.getElementById('adminPassSection').style.display = show ? 'block' : 'none';
+  document.getElementById('adminAccessBtn').style.display = show ? 'none' : 'block';
+  document.getElementById('lcAdminErr').textContent = '';
+  if (show) setTimeout(function(){ var el=document.getElementById('lcAdminPass'); if(el) el.focus(); }, 50);
+}
+
+window.doAdminLogin = async function() {
+  var passEl = document.getElementById('lcAdminPass');
+  var pass = passEl ? passEl.value : '';
+  if (!pass) {
+    document.getElementById('lcAdminErr').textContent = 'Ingresá la contraseña.';
+    return;
+  }
+  var ok = await checkAdminPass(pass);
+  if (ok) {
+    isAdmin = true;
+    document.getElementById('loginScreen').style.display = 'none';
+    var dashTab = document.getElementById('dashNavTab');
+    if (dashTab) dashTab.style.display = '';
+  } else {
+    document.getElementById('lcAdminErr').textContent = 'Contraseña incorrecta.';
+    if (passEl) { passEl.value = ''; passEl.focus(); }
+  }
+};
 </script>
 </body>
 </html>
